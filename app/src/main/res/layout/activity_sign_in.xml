@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:weightSum="1">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sign_in_username_image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/username"
+
+            />
+
+        <com.example.user.mysupermarket.EditTextFont
+        android:id="@+id/sign_in_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorwhite"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="45dp"
+        android:hint="@string/Korisnickoime"
+        android:paddingLeft="39dp"
+        android:paddingBottom="16dp"
+        />
+    
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30.5dp">
+
+        <ImageView
+            android:id="@+id/sign_in_password_image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/password"
+
+            />
+
+        <com.example.user.mysupermarket.EditTextFont
+            android:id="@+id/sign_in_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorwhite"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="45dp"
+            android:hint="@string/Lozinka"
+            android:paddingLeft="39dp"
+            android:paddingBottom="16dp"
+            />
+
+
+
+
+
+    </LinearLayout>
+    
+    
+
+    <com.example.user.mysupermarket.LoginButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="335dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="152.5dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/colorYellowLogin"
+        android:hint="@string/SignInButton"
+        android:textColor="@android:color/black"
+        />
+
+    <com.example.user.mysupermarket.LoginButton
+        android:id="@+id/forgottenpasswordbutton"
+        android:layout_width="150dp"
+        android:layout_height="13dp"
+        android:background="@drawable/bg"
+        android:hint="@string/ZaboravljenaLozinka"
+        android:textColor="@color/colorwhite"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="112.5dp"
+        android:layout_marginBottom="25dp"
+
+        />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MySuperMarket</string>
+    <string name="prijavalogin">PRIJAVA</string>
+    <string name="registracijalogin">REGISTRACIJA</string>
+    <string name="Korisnickoime">Korisnicko ime</string>
+    <string name="Lozinka">Lozinka</string>
+    <string name="SignInButton">Nastavi</string>
+    <string name="ZaboravljenaLozinka">Zaboravljena lozinka ?</string>
+    <string name="ImeiPrezime">Ime Prezime </string>
+    <string name="EMail">E-mail </string>
+    <string name="Potvrditelozinku">Potvrdite lozinku </string>
+    <string name="Unesitebrojmobilnogtelefona">Unesite broj mobilnog telefona </string>
+    <string name="Unesitebrojfiksnogtelefona">Unesite broj fiksnog telefona </string>
+    <string name="Unesitebrojfaksa">Unesite broj faksa </string>
+    <string name="Unesitenazivulice">Unesite naziv ulice </string>
+    <string name="Unesitebrojulice">Unesite broj ulice </string>
+    <string name="Unesitebrojstana">Unesite broj stana </string>
+    <string name="Unesitebrojsprata">Unesite broj sprata </string>
+    <string name="Unesitebrojulaza">Unesite broj ulaza </string>
+    <string name="Unesitepostanskibroj">Unesite postanski broj </string>
+    <string name="Unesiteimegrada">Grad </string>
+    <string name="Newsletter">Newsletter  </string>
+    <string name="Dan">Dan </string>
+    <string name="Mesec">Mesec </string>
+    <string name="Godina">Godina </string>
+    <string name="Pol">Pol </string>
+    <string name="RegistrationButton">Registruj se </string>
+    <string name="Uslovikoriscenja">Uslovi koriscenja </string>
+    <string name="PolMuski">Muski </string>
+    <string name="PolZenski">Zenski </string>
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        >
+
+        <ImageView
+            android:id="@+id/iconbacklogin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="12.5dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/back"
+            />
+        
+        <ImageView
+            android:id="@+id/iconaddphoto"
+            android:layout_width="26.5dp"
+            android:layout_height="25.5dp"
+            android:layout_marginLeft="296dp"
+            android:layout_marginTop="18.5dp"
+            android:background="@mipmap/add"
+            android:src="@mipmap/add"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/loginlinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/logo_white"
+            android:layout_marginLeft="62.5dp"
+            android:layout_marginTop="54dp"
+            />
+
+       
+
+    </LinearLayout>
+
+
+
+    <android.support.design.widget.TabLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg"
+        android:id="@+id/tabLayout"
+        android:layout_below="@+id/loginlinearlayout"
+        app:tabIndicatorColor="@color/colorYellowLogin"
+        app:tabTextColor="#fff"
+
+        >
+
+
+
+
+
+        <!--cubes.supermarket.TextViewFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prijavaLogin"
+        android:text="@string/prijavalogin"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="69.3dp"
+        android:layout_marginRight="256.3dp"
+        android:layout_marginTop="239.5dp"
+        android:textColor="#fff"/-->
+
+        <!--cubes.supermarket.TextViewFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/registracijasLogin"
+            android:text="@string/registracijalogin"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="237.8dp"
+            android:layout_marginRight="50.3dp"
+            android:layout_marginTop="239.5dp"
+            android:textColor="#fff"/-->
+    </android.support.design.widget.TabLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tabLayout">
+
+
+
+        <!--android.support.v4.view.PagerTabStrip
+            android:id="@+id/pager_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+
+            /-->
+
+
+
+    </android.support.v4.view.ViewPager>
+
+
+    <!--com.example.user.mysupermarket.TextViewFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prijavaLogin"
+        android:text="@string/prijavalogin"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="69.3dp"
+        android:layout_marginRight="256.3dp"
+        android:layout_marginTop="139.5dp"
+        android:textColor="#fff"/>
+
+
+    <com.example.user.mysupermarket.TextViewFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/registracijasLogin"
+            android:text="@string/registracijalogin"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="237.8dp"
+            android:layout_marginRight="50.3dp"
+            android:layout_marginTop="139.5dp"
+            android:textColor="#fff"/-->
+
+
+</LinearLayout>
