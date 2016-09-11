@@ -15,7 +15,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="25dp"
             android:src="@drawable/username"
 
             />
@@ -24,9 +24,9 @@
         android:id="@+id/sign_in_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorwhite"
+        android:textColor="#ffffff"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="25dp"
         android:hint="@string/Korisnickoime"
         android:paddingLeft="39dp"
         android:paddingBottom="16dp"
@@ -48,7 +48,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="25dp"
             android:src="@drawable/password"
 
             />
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorwhite"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="25dp"
             android:hint="@string/Lozinka"
             android:paddingLeft="39dp"
             android:paddingBottom="16dp"
@@ -77,7 +77,7 @@
         android:id="@+id/sign_in_button"
         android:layout_width="335dp"
         android:layout_height="55dp"
-        android:layout_marginTop="152.5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:background="@color/colorYellowLogin"
         android:hint="@string/SignInButton"
@@ -86,14 +86,15 @@
 
     <com.example.user.mysupermarket.LoginButton
         android:id="@+id/forgottenpasswordbutton"
-        android:layout_width="150dp"
-        android:layout_height="13dp"
+        android:layout_width="200dp"
+        android:layout_height="23dp"
         android:background="@drawable/bg"
         android:hint="@string/ZaboravljenaLozinka"
         android:textColor="@color/colorwhite"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="112.5dp"
+        android:layout_marginLeft="92.5dp"
         android:layout_marginBottom="25dp"
+
 
         />
 

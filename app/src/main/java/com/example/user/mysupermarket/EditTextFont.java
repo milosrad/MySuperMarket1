@@ -16,4 +16,7 @@ public class EditTextFont extends EditText {
     public EditTextFont(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
+
+
+
 }

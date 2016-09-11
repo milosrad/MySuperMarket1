@@ -12,12 +12,17 @@ public class LoginFragmentAdapter extends FragmentPagerAdapter {
 
     private static int NUM_PAGES = 2;
 
+    private int tabCount;
+
 
     public LoginFragmentAdapter(FragmentManager fm) {
         super(fm);
     }
 
-
+    public LoginFragmentAdapter(FragmentManager fm, int tabCount) {
+        super(fm);
+        this.tabCount = tabCount;
+    }
 
     @Override
     public Fragment getItem(int position) {
@@ -40,6 +45,9 @@ public class LoginFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
+
+
+      //  return tabCount;
         return NUM_PAGES;
     }
 }

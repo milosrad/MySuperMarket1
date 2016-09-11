@@ -18,6 +18,7 @@
             android:layout_marginTop="19dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/back"
+            android:visibility="gone"
             />
         
         <ImageView
@@ -27,6 +28,7 @@
             android:layout_marginLeft="296dp"
             android:layout_marginTop="18.5dp"
             android:background="@mipmap/add"
+            android:visibility="gone"
             android:src="@mipmap/add"/>
 
 
@@ -41,10 +43,20 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewlogo"
             android:src="@drawable/logo_white"
             android:layout_marginLeft="62.5dp"
             android:layout_marginTop="54dp"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/registrationphotoimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="137.5dp"
+            android:visibility="gone"
             />
 
        
@@ -102,7 +114,8 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/tabLayout">
+        android:layout_below="@id/tabLayout"
+        >
 
 
 

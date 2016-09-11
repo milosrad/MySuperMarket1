@@ -26,15 +26,17 @@
             />
 
         <com.example.user.mysupermarket.EditTextFont
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/registration_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorwhite"
+            android:textColor="#ffffff"
             android:layout_marginLeft="14dp"
             android:layout_marginTop="45dp"
             android:hint="@string/ImeiPrezime"
             android:paddingLeft="39dp"
             android:paddingBottom="16dp"
+
 
             />
 
@@ -414,8 +416,8 @@
 
         <Spinner
             android:id="@+id/spinnercity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
             android:layout_marginTop="45dp"
             android:layout_marginLeft="10dp"
             >
