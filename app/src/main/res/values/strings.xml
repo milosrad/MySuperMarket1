@@ -28,4 +28,6 @@
     <string name="Uslovikoriscenja">Uslovi koriscenja </string>
     <string name="PolMuski">Muski </string>
     <string name="PolZenski">Zenski </string>
+    <string name="Zaboravljenalozinka">Unesite Vasu E-mail adresu </string>
+    <string name="PosaljiEmail">Posaljite Vasu E-mail adresu </string>
 </resources>

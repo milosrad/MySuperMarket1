@@ -662,9 +662,9 @@
 
 
         <com.example.user.mysupermarket.LoginButton
-            android:id="@+id/forgottenpasswordbutton"
+            android:id="@+id/termsofusebutton"
             android:layout_width="150dp"
-            android:layout_height="13dp"
+            android:layout_height="23dp"
             android:background="@drawable/bg"
             android:hint="@string/Uslovikoriscenja"
             android:textColor="@color/colorwhite"

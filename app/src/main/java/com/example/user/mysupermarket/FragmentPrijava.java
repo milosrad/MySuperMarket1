@@ -1,6 +1,7 @@
 package com.example.user.mysupermarket;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -48,6 +49,26 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
         EditTextFont mPassword = (EditTextFont) view.findViewById(R.id.sign_in_password);
         mPassword.setText(getResources().getString(R.string.Lozinka));
         mPassword.setTextColor(getResources().getColor(R.color.colorwhite));
+
+        LoginButton mSignInButton=(LoginButton)view.findViewById(R.id.sign_in_button);
+
+        mSignInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        LoginButton mSignInForgottenPasswordButton=(LoginButton)view.findViewById(R.id.forgottenpasswordbutton);
+
+        mSignInForgottenPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getContext(),ForgottenPasswordActivity.class));
+
+            }
+        });
 
      //   mUserName.setBackgroundColor(getResources().getColor(R.color.colorwhite));
 

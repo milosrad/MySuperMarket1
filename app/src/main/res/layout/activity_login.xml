@@ -25,11 +25,12 @@
             android:id="@+id/iconaddphoto"
             android:layout_width="26.5dp"
             android:layout_height="25.5dp"
-            android:layout_marginLeft="296dp"
+            android:layout_marginLeft="286dp"
             android:layout_marginTop="18.5dp"
             android:background="@mipmap/add"
             android:visibility="gone"
-            android:src="@mipmap/add"/>
+            android:src="@mipmap/add"
+            />
 
 
     </LinearLayout>

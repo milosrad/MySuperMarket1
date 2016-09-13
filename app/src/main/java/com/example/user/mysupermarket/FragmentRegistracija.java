@@ -1,6 +1,7 @@
 package com.example.user.mysupermarket;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -179,6 +180,15 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
         mRadioButtonFemale.setTextColor((getResources().getColor(R.color.colorwhite)));
         mRadioButtonMale.setTextColor((getResources().getColor(R.color.colorwhite)));
+
+        LoginButton mTermsOfUseButton=(LoginButton)view.findViewById(R.id.termsofusebutton);
+
+        mTermsOfUseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(),TermsOfUseActivity.class));
+            }
+        });
 
         return view;
 
