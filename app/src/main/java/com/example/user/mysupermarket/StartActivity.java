@@ -20,11 +20,13 @@ import com.example.user.mysupermarket.data.response.ResponseSignUp;
 import com.example.user.mysupermarket.data.response.ResponseToken;
 import com.example.user.mysupermarket.networking.DataLoader;
 import com.example.user.mysupermarket.networking.GsonRequest;
+import com.example.user.mysupermarket.tools.BusProvider;
+import com.example.user.mysupermarket.tools.MessageObject;
 
 /**
  * Created by cubesschool5 on 9/7/16.
  */
-public class StartActivity extends Activity {
+public class StartActivity extends MessageActivity {
 
 
     private GsonRequest<ResponseToken>mRequestToken;
@@ -84,7 +86,9 @@ public class StartActivity extends Activity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+              //  Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+
+                BusProvider.getInstance().post(new MessageObject());
 
             }
         });

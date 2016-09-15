@@ -30,4 +30,5 @@
     <string name="PolZenski">Zenski </string>
     <string name="Zaboravljenalozinka">Unesite Vasu E-mail adresu </string>
     <string name="PosaljiEmail">Posaljite Vasu E-mail adresu </string>
+    <string name="Greska">Doslo je do greske,pokusajte ponovo!</string>
 </resources>

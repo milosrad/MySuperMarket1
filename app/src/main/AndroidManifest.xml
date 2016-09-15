@@ -25,6 +25,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".ForgottenPasswordActivity"/>
         <activity android:name=".TermsOfUseActivity"/>
+        <activity android:name=".MessageActivity"/>
     </application>
 
 </manifest>

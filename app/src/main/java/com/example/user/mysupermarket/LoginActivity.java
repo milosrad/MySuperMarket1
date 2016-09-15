@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Created by cubesschool5 on 9/7/16.
  */
-public class LoginActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
+public class LoginActivity extends MessageActivity implements TabLayout.OnTabSelectedListener {
 
   //  private PagerTabStrip mPageTabStrip;
 
