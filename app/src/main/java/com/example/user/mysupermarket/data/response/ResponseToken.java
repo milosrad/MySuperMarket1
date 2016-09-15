@@ -12,8 +12,5 @@ public class ResponseToken {
 
         public DataToken results;
 
-
-
-
     }
 }

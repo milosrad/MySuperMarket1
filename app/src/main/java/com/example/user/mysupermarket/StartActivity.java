@@ -12,7 +12,11 @@ import com.example.user.mysupermarket.data.Constant;
 import com.example.user.mysupermarket.data.DataContainer;
 import com.example.user.mysupermarket.data.response.ResponseCategory;
 import com.example.user.mysupermarket.data.response.ResponseCity;
+import com.example.user.mysupermarket.data.response.ResponseForgotPassword;
+import com.example.user.mysupermarket.data.response.ResponseHomeProducts;
+import com.example.user.mysupermarket.data.response.ResponseLogin;
 import com.example.user.mysupermarket.data.response.ResponseReservation;
+import com.example.user.mysupermarket.data.response.ResponseSignUp;
 import com.example.user.mysupermarket.data.response.ResponseToken;
 import com.example.user.mysupermarket.networking.DataLoader;
 import com.example.user.mysupermarket.networking.GsonRequest;
@@ -27,6 +31,10 @@ public class StartActivity extends Activity {
     private GsonRequest<ResponseCategory>mRequestCategory;
     private GsonRequest<ResponseCity>mRequestCity;
     private GsonRequest<ResponseReservation>mRequestReservation;
+    private GsonRequest<ResponseForgotPassword>mRequestForgotPassword;
+    private GsonRequest<ResponseSignUp>mRequestSignUp;
+    private GsonRequest<ResponseLogin>mRequestLogin;
+    private GsonRequest<ResponseHomeProducts>mRequestHomeProducts;
 
     private int serviceCounter;
 
@@ -60,6 +68,16 @@ public class StartActivity extends Activity {
             //    incrementServiceCounter();
 
                 DataLoader.addRequest(getApplicationContext(),mRequestReservation,REQUEST_TAG);
+
+                DataLoader.addRequest(getApplicationContext(),mRequestForgotPassword,REQUEST_TAG);
+
+                DataLoader.addRequest(getApplicationContext(),mRequestSignUp,REQUEST_TAG);
+
+                DataLoader.addRequest(getApplicationContext(),mRequestLogin,REQUEST_TAG);
+
+                DataLoader.addRequest(getApplicationContext(),mRequestHomeProducts,REQUEST_TAG);
+
+
 
             }
         }, new Response.ErrorListener() {
@@ -100,7 +118,7 @@ public class StartActivity extends Activity {
 
                 incrementServiceCounter();
 
-                Toast.makeText(getApplicationContext(),DataContainer.cities.toString(),Toast.LENGTH_LONG).show();
+          //      Toast.makeText(getApplicationContext(),DataContainer.cities.toString(),Toast.LENGTH_LONG).show();
 
 
 
@@ -121,11 +139,11 @@ public class StartActivity extends Activity {
             @Override
             public void onResponse(ResponseReservation response) {
 
-             /*   DataContainer.reservations=response.data.results;
+                DataContainer.reservations=response.data.results;
 
-                Toast.makeText(getApplicationContext(),DataContainer.reservations.toString(),Toast.LENGTH_LONG).show();
+           //     Toast.makeText(getApplicationContext(),DataContainer.reservations.toString(),Toast.LENGTH_LONG).show();
 
-                incrementServiceCounter(); */
+                incrementServiceCounter();
 
             }
         }, new Response.ErrorListener() {
@@ -136,6 +154,79 @@ public class StartActivity extends Activity {
 
             }
         });
+
+        mRequestForgotPassword=new GsonRequest<ResponseForgotPassword>(Constant.FORGOT_PASSWORD_URL + "?token" + DataContainer.TOKEN, Request.Method.GET, ResponseForgotPassword.class, new Response.Listener<ResponseForgotPassword>() {
+            @Override
+            public void onResponse(ResponseForgotPassword response) {
+
+                DataContainer.forgottenPasswordEmail=response.data.results;
+                incrementServiceCounter();
+          //      Toast.makeText(getApplicationContext(),DataContainer.forgottenPasswordEmail.toString(),Toast.LENGTH_LONG).show(); */
+          //      incrementServiceCounter();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        mRequestSignUp=new GsonRequest<ResponseSignUp>(Constant.SIGNUP_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseSignUp.class, new Response.Listener<ResponseSignUp>() {
+            @Override
+            public void onResponse(ResponseSignUp response) {
+
+                DataContainer.dataSignUps=response.data.results;
+
+                incrementServiceCounter();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        mRequestLogin=new GsonRequest<ResponseLogin>(Constant.LOGIN_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseLogin.class, new Response.Listener<ResponseLogin>() {
+            @Override
+            public void onResponse(ResponseLogin response) {
+
+                DataContainer.dataLogins=response.data.results;
+                incrementServiceCounter();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        mRequestHomeProducts=new GsonRequest<ResponseHomeProducts>(Constant.HOME_PAGE_PRODUCT_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseHomeProducts.class, new Response.Listener<ResponseHomeProducts>() {
+            @Override
+            public void onResponse(ResponseHomeProducts response) {
+
+                DataContainer.homeProducts=response.data.results;
+                incrementServiceCounter();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
 
 
         DataLoader.addRequest(getApplicationContext(),mRequestToken,REQUEST_TAG);
@@ -178,7 +269,7 @@ public class StartActivity extends Activity {
 
         serviceCounter++;
 
-        if (serviceCounter>=3){
+        if (serviceCounter>=8){
 
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             finish();

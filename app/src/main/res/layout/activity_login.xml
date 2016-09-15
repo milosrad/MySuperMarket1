@@ -6,8 +6,10 @@
     >
     
     <LinearLayout
+        android:id="@+id/registrationicons"
         android:layout_width="match_parent"
         android:layout_height="54dp"
+        android:visibility="invisible"
         >
 
         <ImageView
@@ -18,9 +20,9 @@
             android:layout_marginTop="19dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/back"
-            android:visibility="gone"
+            android:visibility="visible"
             />
-        
+
         <ImageView
             android:id="@+id/iconaddphoto"
             android:layout_width="26.5dp"
@@ -28,8 +30,9 @@
             android:layout_marginLeft="286dp"
             android:layout_marginTop="18.5dp"
             android:background="@mipmap/add"
-            android:visibility="gone"
+            android:visibility="visible"
             android:src="@mipmap/add"
+
             />
 
 

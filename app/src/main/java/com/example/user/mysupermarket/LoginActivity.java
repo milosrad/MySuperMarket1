@@ -21,6 +21,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -45,6 +46,8 @@ public class LoginActivity extends AppCompatActivity implements TabLayout.OnTabS
 
     private ImageView mIconBack,mIconAddPhoto;
     private ImageView mLogo,mPhoto;
+
+    private LinearLayout mRegistrationIcons;
 
 
     private Uri outputFileUri;
@@ -82,17 +85,25 @@ public class LoginActivity extends AppCompatActivity implements TabLayout.OnTabS
         int position= tab.getPosition();
 
         if (position==1){
-            mPhoto.setVisibility(View.VISIBLE);
+          /*  mPhoto.setVisibility(View.VISIBLE);
             mIconAddPhoto.setVisibility(View.VISIBLE);
             mLogo.setVisibility(View.GONE);
-            mIconBack.setVisibility(View.VISIBLE);
+            mIconBack.setVisibility(View.VISIBLE); */
+
+            mRegistrationIcons.setVisibility(View.VISIBLE);
+            mLogo.setVisibility(View.GONE);
         }
 
         else{
-            mPhoto.setVisibility(View.GONE);
+         /*   mPhoto.setVisibility(View.GONE);
             mIconAddPhoto.setVisibility(View.GONE);
             mLogo.setVisibility(View.VISIBLE);
-            mIconBack.setVisibility(View.GONE);
+            mIconBack.setVisibility(View.GONE); */
+
+            mRegistrationIcons.setVisibility(View.INVISIBLE);
+            mLogo.setVisibility(View.VISIBLE);
+
+
 
         }
 
@@ -151,6 +162,8 @@ public class LoginActivity extends AppCompatActivity implements TabLayout.OnTabS
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
 
      //   mTabLayout.setOnClickListener(this);
+
+        mRegistrationIcons=(LinearLayout)findViewById(R.id.registrationicons);
 
 
 
@@ -274,10 +287,21 @@ public class LoginActivity extends AppCompatActivity implements TabLayout.OnTabS
     } */
 
 
+    @Override
+    public void onBackPressed() {
+     //   super.onBackPressed();
 
+     //   mViewPager.setCurrentItem(0,true);
 
+        int position= mViewPager.getCurrentItem();
 
+        if (position==1){
+            mViewPager.setCurrentItem(0,true);
+        }
 
+        else {
 
-
+            super.onBackPressed();
+        }
+    }
 }
