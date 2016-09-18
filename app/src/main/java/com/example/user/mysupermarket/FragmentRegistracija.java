@@ -279,6 +279,8 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
                 Toast.makeText(getActivity().getApplicationContext(),"SIGN IN",Toast.LENGTH_LONG).show();
 
                 DataLoader.addRequest(getActivity().getApplicationContext(), mRequestSignUp, REQUEST_TAG);
+
+                startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivity.class));
             }
         });
 

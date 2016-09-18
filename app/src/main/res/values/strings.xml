@@ -36,4 +36,23 @@
     <string name="Prezime">Prezime </string>
     <string name="Producttitle">Product title</string>
     <string name="Price">$999</string>
+
+    <string-array name="menu_options">
+
+        <item>Ime i Preime</item>
+        <item>E-mail</item>
+        <item>Home</item>
+        <item>Cipele</item>
+        <item>Torbe</item>
+        <item>Satovi</item>
+        <item>Nakit</item>
+        <item>Sportska oprema</item>
+        <item>Donji ves</item>
+        <item>Naocare</item>
+        <item>Kaisevi</item>
+        <item>Podesavanja</item>
+        <item>Profil</item>
+        <item>Odjavi se</item>
+
+    </string-array>
 </resources>
