@@ -7,7 +7,18 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.example.user.mysupermarket.data.Constant;
+import com.example.user.mysupermarket.data.DataContainer;
+import com.example.user.mysupermarket.data.response.ResponseLogin;
+import com.example.user.mysupermarket.networking.DataLoader;
+import com.example.user.mysupermarket.networking.GsonRequest;
 
 /**
  * Created by cubesschool5 on 9/7/16.
@@ -15,7 +26,25 @@ import android.widget.EditText;
 public class FragmentPrijava extends android.support.v4.app.Fragment {
 
 
-    private EditTextFont mUsername;
+
+
+    EditTextFont mUserName;
+    EditTextFont mPassword;
+    LoginButton mSignInButton;
+    LoginButton mSignInForgottenPasswordButton;
+    TextViewFont mRememberMe;
+    CheckBox mRememberMeCheckBox;
+
+    private GsonRequest<ResponseLogin> mRequestLogin;
+
+    private final String REQUEST_TAG="Fragment Prijava";
+
+
+
+
+
+
+    View view;
     /*private String title;
     private int page;
 
@@ -41,25 +70,45 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_sign_in, container, false);
-        EditTextFont mUserName = (EditTextFont) view.findViewById(R.id.sign_in_username);
-        mUserName.setText(getResources().getString(R.string.Korisnickoime));
-        mUserName.setTextColor(getResources().getColor(R.color.colorwhite));
+        view = inflater.inflate(R.layout.activity_sign_in, container, false);
+        mUserName = (EditTextFont) view.findViewById(R.id.sign_in_username);
+        mUserName.setHint(getResources().getString(R.string.Korisnickoime));
+        mUserName.setHintTextColor(getResources().getColor(R.color.colorwhite));
 
-        EditTextFont mPassword = (EditTextFont) view.findViewById(R.id.sign_in_password);
-        mPassword.setText(getResources().getString(R.string.Lozinka));
-        mPassword.setTextColor(getResources().getColor(R.color.colorwhite));
+        mPassword = (EditTextFont) view.findViewById(R.id.sign_in_password);
+        mPassword.setHint(getResources().getString(R.string.Lozinka));
+        mPassword.setHintTextColor(getResources().getColor(R.color.colorwhite));
 
-        LoginButton mSignInButton=(LoginButton)view.findViewById(R.id.sign_in_button);
+        mRequestLogin= new GsonRequest<ResponseLogin>(Constant.LOGIN_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseLogin.class, new Response.Listener<ResponseLogin>() {
+            @Override
+            public void onResponse(ResponseLogin response) {
+
+                DataContainer.dataLogins=response.data.results;
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(getActivity().getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        mSignInButton=(LoginButton)view.findViewById(R.id.sign_in_button);
 
         mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                DataLoader.addRequest(getActivity().getApplicationContext(),mRequestLogin,REQUEST_TAG);
+
+                startActivity(new Intent(getActivity().getApplicationContext(),HomeActivity.class));
+
             }
         });
 
-        LoginButton mSignInForgottenPasswordButton=(LoginButton)view.findViewById(R.id.forgottenpasswordbutton);
+        mSignInForgottenPasswordButton=(LoginButton)view.findViewById(R.id.forgottenpasswordbutton);
 
         mSignInForgottenPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +119,31 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
             }
         });
 
+        mRememberMe=(TextViewFont)view.findViewById(R.id.sign_in_remember_me);
+        mRememberMe.setText(getResources().getString(R.string.Zapamtime));
+        mRememberMe.setTextColor(getResources().getColor(R.color.colorwhite));
+
+
+        mRememberMeCheckBox=(CheckBox)view.findViewById(R.id.remembermecheckbox);
+
      //   mUserName.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+
+
+        mUserName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if(b) {
+                 //   mUserName.setHint("");
+                    mUserName.setHint(getResources().getString(R.string.Korisnickoime));
+                }
+                else{
+                //    mUserName.setHint(getResources().getString(R.string.Korisnickoime));
+                    mUserName.setHint("");
+                }
+
+
+            }
+        });
 
 
 

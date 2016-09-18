@@ -31,4 +31,9 @@
     <string name="Zaboravljenalozinka">Unesite Vasu E-mail adresu </string>
     <string name="PosaljiEmail">Posaljite Vasu E-mail adresu </string>
     <string name="Greska">Doslo je do greske,pokusajte ponovo!</string>
+    <string name="Zapamtime">Zapamti me </string>
+    <string name="Ime">Ime </string>
+    <string name="Prezime">Prezime </string>
+    <string name="Producttitle">Product title</string>
+    <string name="Price">$999</string>
 </resources>

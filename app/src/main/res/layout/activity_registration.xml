@@ -30,10 +30,10 @@
             android:id="@+id/registration_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColorHint="@color/colorwhite"
             android:layout_marginLeft="14dp"
             android:layout_marginTop="45dp"
-            android:hint="@string/ImeiPrezime"
+            android:hint="@string/Ime"
             android:paddingLeft="39dp"
             android:paddingBottom="16dp"
 
@@ -43,6 +43,37 @@
 
 
     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <ImageView
+                android:id="@+id/registration_surname_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/username"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/registration_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Prezime"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+
+                />
+
+        </LinearLayout>
 
 
     <LinearLayout

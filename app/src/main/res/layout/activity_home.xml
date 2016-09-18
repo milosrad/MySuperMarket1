@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:id="@+id/root">
+
+
+    <LinearLayout
+        android:id="@+id/homeicons"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/homeiconmenu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="12.5dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/menu"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/homelogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:src="@drawable/logo_white"
+            android:layout_marginTop="32.3dp"/>
+
+        <ImageView
+            android:id="@+id/homeiconsearch"
+            android:layout_width="26.5dp"
+            android:layout_height="25.5dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="13.5dp"
+            android:visibility="visible"
+            android:src="@drawable/search"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+   <RelativeLayout
+       android:id="@+id/relativelayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recycler_view_home"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scrollbars="vertical"
+           android:layout_marginTop="12.5dp"
+           android:layout_marginLeft="28.5dp"
+           android:layout_marginBottom="62.5dp"
+           android:layout_marginRight="28.5dp"
+
+           >
+       </android.support.v7.widget.RecyclerView>
+
+
+
+   </RelativeLayout>
+
+</LinearLayout>

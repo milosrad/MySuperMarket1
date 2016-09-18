@@ -70,6 +70,36 @@
 
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10.5dp">
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/sign_in_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorwhite"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Zapamtime"
+            android:paddingLeft="39dp"
+            android:paddingBottom="16dp"
+            android:textSize="16dp"
+            />
+
+
+        <CheckBox
+            android:id="@+id/remembermecheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"/>
+
+    </LinearLayout>
     
     
 

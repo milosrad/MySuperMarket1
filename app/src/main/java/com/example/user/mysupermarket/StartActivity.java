@@ -73,9 +73,9 @@ public class StartActivity extends MessageActivity {
 
                 DataLoader.addRequest(getApplicationContext(),mRequestForgotPassword,REQUEST_TAG);
 
-                DataLoader.addRequest(getApplicationContext(),mRequestSignUp,REQUEST_TAG);
+            //    DataLoader.addRequest(getApplicationContext(),mRequestSignUp,REQUEST_TAG);
 
-                DataLoader.addRequest(getApplicationContext(),mRequestLogin,REQUEST_TAG);
+            //    DataLoader.addRequest(getApplicationContext(),mRequestLogin,REQUEST_TAG);
 
                 DataLoader.addRequest(getApplicationContext(),mRequestHomeProducts,REQUEST_TAG);
 
@@ -178,7 +178,7 @@ public class StartActivity extends MessageActivity {
             }
         });
 
-        mRequestSignUp=new GsonRequest<ResponseSignUp>(Constant.SIGNUP_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseSignUp.class, new Response.Listener<ResponseSignUp>() {
+     /*   mRequestSignUp=new GsonRequest<ResponseSignUp>(Constant.SIGNUP_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseSignUp.class, new Response.Listener<ResponseSignUp>() {
             @Override
             public void onResponse(ResponseSignUp response) {
 
@@ -194,9 +194,9 @@ public class StartActivity extends MessageActivity {
                 Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
 
             }
-        });
+        });  */
 
-        mRequestLogin=new GsonRequest<ResponseLogin>(Constant.LOGIN_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseLogin.class, new Response.Listener<ResponseLogin>() {
+      /*  mRequestLogin=new GsonRequest<ResponseLogin>(Constant.LOGIN_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseLogin.class, new Response.Listener<ResponseLogin>() {
             @Override
             public void onResponse(ResponseLogin response) {
 
@@ -211,7 +211,7 @@ public class StartActivity extends MessageActivity {
                 Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
 
             }
-        });
+        });  */
 
         mRequestHomeProducts=new GsonRequest<ResponseHomeProducts>(Constant.HOME_PAGE_PRODUCT_URL + "?token=" + DataContainer.TOKEN, Request.Method.GET, ResponseHomeProducts.class, new Response.Listener<ResponseHomeProducts>() {
             @Override
@@ -273,7 +273,7 @@ public class StartActivity extends MessageActivity {
 
         serviceCounter++;
 
-        if (serviceCounter>=8){
+        if (serviceCounter>=6){
 
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             finish();
