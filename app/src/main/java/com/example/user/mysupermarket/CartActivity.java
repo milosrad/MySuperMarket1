@@ -22,6 +22,7 @@ public class CartActivity extends MessageActivity {
     private TextViewFont mTotalPrice;
 
     private ImageView mIconBack;
+    private ImageView mIconSum;
 
     private RecyclerView mRecyclerView;
 
@@ -50,6 +51,7 @@ public class CartActivity extends MessageActivity {
         mTotalPrice=(TextViewFont)findViewById(R.id.textViewtotalprice);
 
         mIconBack=(ImageView)findViewById(R.id.carticonback);
+        mIconSum=(ImageView)findViewById(R.id.carticonright);
 
         mRecyclerView=(RecyclerView)findViewById(R.id.recycler_view_cart);
 
@@ -101,6 +103,13 @@ public class CartActivity extends MessageActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        mIconSum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
             }
         });
     }

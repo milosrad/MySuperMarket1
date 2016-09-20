@@ -1,6 +1,9 @@
 package com.example.user.mysupermarket;
 
 import android.content.Context;
+import android.database.CharArrayBuffer;
+import android.icu.math.BigDecimal;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,16 +41,42 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(final CartAdapter.ViewHolder holder, int position) {
 
-        holder.mPrice.setText("Cena:");
+        holder.mPrice.setText("Cena:$35.4");
         holder.mAmount.setText("Kolicina:1");
+
+        final double onepieceprice= Double.parseDouble((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length()));
+
+        //final BigDecimal onepiecepricedecimal= new BigDecimal((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length())).setScale(2);
+
+
 
         holder.mCartIconPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               int number=Character.getNumericValue(holder.mAmount.getText().charAt(9));
+             /*  int number=Character.getNumericValue(holder.mAmount.getText().charAt(9));
                 int newnumber=number++;
 
-                holder.mAmount.setText("Kolicina:"+ number);
+                holder.mAmount.setText("Kolicina:"+ number); */
+
+                int number=Integer.parseInt((String) holder.mAmount.getText().subSequence(9,holder.mAmount.getText().length()));
+                number++;
+
+                holder.mAmount.setText("Kolicina:" + number);
+
+               double price= Double.parseDouble((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length()));
+
+                double newprice=price+onepieceprice;
+
+
+              /*      BigDecimal price = new BigDecimal((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length())).setScale(2);
+
+
+                BigDecimal newprice= onepiecepricedecimal.add(price); */
+
+                CharSequence seq1= holder.mPrice.getText().subSequence(0,6);
+                String string1= seq1.toString();
+                holder.mPrice.setText(string1.concat(""+newprice));
+
 
 
             }
@@ -56,12 +85,50 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         holder.mCartIconMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int number=Character.getNumericValue(holder.mAmount.getText().charAt(9));
+               /* int number=Character.getNumericValue(holder.mAmount.getText().charAt(9));
                 if(number>1) {
                     int newnumber = number--;
 
                     holder.mAmount.setText("Kolicina:" + number);
+                } */
+
+                int number=Integer.parseInt((String) holder.mAmount.getText().subSequence(9,holder.mAmount.getText().length()));
+                if(number>1) {
+                     number--;
+
+                    holder.mAmount.setText("Kolicina:" + number);
+
+                    double price= Double.parseDouble((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length()));
+
+                    double newprice=price-onepieceprice;
+
+                /*    BigDecimal price = new BigDecimal((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length())).setScale(2);
+
+
+                    BigDecimal newprice= price.subtract(onepiecepricedecimal); */
+
+
+
+
+
+                    CharSequence seq1= holder.mPrice.getText().subSequence(0,6);
+                    String string1= seq1.toString();
+                    holder.mPrice.setText(string1.concat(""+newprice));
+
+
                 }
+                else if (number==1)
+                {
+                    CharSequence seq1= holder.mPrice.getText().subSequence(0,6);
+                    String string1= seq1.toString();
+                    holder.mPrice.setText(string1.concat(""+onepieceprice));
+
+                }
+
+
+
+
+
             }
         });
 

@@ -120,7 +120,7 @@
             android:layout_height="73.3dp"
             android:background="@color/colorYellowLogin"
             android:layout_marginLeft="26.7dp"
-            android:layout_marginTop="86.7dp"
+            android:layout_marginTop="56.7dp"
             android:layout_marginBottom="29.3dp"
             android:layout_marginRight="26.7dp"
             android:text="@string/Kupi"/>
