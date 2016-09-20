@@ -36,6 +36,13 @@
     <string name="Prezime">Prezime </string>
     <string name="Producttitle">Product title</string>
     <string name="Price">$999</string>
+    <string name="Dodajukorpu">Dodaj u korpu</string>
+    <string name="Muskacipela">Muska cipela</string>
+    <string name="Velicina">Velicina:</string>
+    <string name="Boja">Boja:</string>
+    <string name="Materijal">Materijal:</string>
+    <string name="Korpa">Korpa</string>
+    <string name="Kupi">Kupi</string>
 
     <string-array name="menu_options">
 

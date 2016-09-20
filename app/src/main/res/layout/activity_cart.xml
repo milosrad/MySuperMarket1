@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/carticons"
+            android:layout_width="match_parent"
+            android:layout_height="85.3dp"
+            android:visibility="visible"
+
+            >
+
+            <ImageView
+                android:id="@+id/producticonback"
+                android:layout_width="33.3dp"
+                android:layout_height="33.3dp"
+                android:layout_marginLeft="16.7dp"
+                android:layout_marginTop="38.7dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/back"
+                android:visibility="visible"
+                />
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/cartlogo"
+                android:layout_width="62.7dp"
+                android:layout_height="22.7dp"
+                android:layout_marginLeft="26.7dp"
+                android:text="@string/Korpa"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/colorwhite"
+                android:textSize="22.7sp"
+                android:padding="0.3sp"/>
+
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+        <com.example.user.mysupermarket.LoginButton
+            android:id="@+id/cartbuy"
+            android:layout_width="match_parent"
+            android:layout_height="73.3dp"
+            android:background="@color/colorYellowLogin"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginTop="186.7dp"
+            android:layout_marginBottom="29.3dp"
+            android:layout_marginRight="26.7dp"
+            android:text="@string/Kupi"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

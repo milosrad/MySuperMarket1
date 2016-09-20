@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+
+    <ImageView
+        android:id="@+id/cartimageproduct"
+        android:layout_width="89.3dp"
+        android:layout_height="89.3dp"
+        android:layout_marginLeft="8.7dp"
+        android:layout_marginTop="16.7dp"/>
+
+
+    <com.example.user.mysupermarket.TextViewFont
+        android:id="@+id/carttypeproduct"
+        android:layout_width="51.3dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16.7dp"
+        android:layout_toRightOf="@+id/cartimageproduct"
+        android:layout_marginLeft="7.3dp"/>
+
+
+    <com.example.user.mysupermarket.TextViewFont
+        android:id="@+id/cartpriceproduct"
+        android:layout_width="108dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="7.3dp"
+        android:layout_marginTop="14.7dp"
+        android:layout_below="@+id/carttypeproduct"
+        android:layout_toRightOf="@+id/cartimageproduct"/>
+
+
+    <com.example.user.mysupermarket.TextViewFont
+        android:id="@+id/cartamountproduct"
+        android:layout_width="92.7dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="7.3dp"
+        android:layout_marginTop="14.7dp"
+        android:layout_below="@+id/cartpriceproduct"
+        android:layout_toRightOf="@+id/cartimageproduct"/>
+
+
+    <ImageView
+        android:id="@+id/carticonminus"
+        android:layout_width="30.7dp"
+        android:layout_height="30.7dp"
+        android:layout_toRightOf="@id/cartpriceproduct"
+        android:layout_marginLeft="81.3dp"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/minus"/>
+
+
+    <ImageView
+        android:id="@+id/carticonplus"
+        android:layout_width="30.7dp"
+        android:layout_height="30.7dp"
+        android:layout_toRightOf="@id/carticonminus"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/plus"/>
+
+</RelativeLayout>

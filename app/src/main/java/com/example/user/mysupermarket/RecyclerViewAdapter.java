@@ -1,6 +1,7 @@
 package com.example.user.mysupermarket;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +23,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         mInflater=LayoutInflater.from(context);
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextViewFont mTitle;
         public TextViewFont mPrice;
@@ -38,6 +39,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             mTitle = (TextViewFont) v.findViewById(R.id.producttitle);
             mPrice = (TextViewFont) v.findViewById(R.id.productprice2);
             mProImage=(ImageView)v.findViewById(R.id.productimage);
+
+            mProImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, ProductActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    mContext.startActivity(intent);
+                }
+            });
 
         }
     }

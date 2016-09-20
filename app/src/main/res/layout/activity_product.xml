@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/producticons"
+            android:layout_width="match_parent"
+            android:layout_height="85.3dp"
+            android:visibility="visible"
+
+            >
+
+            <ImageView
+                android:id="@+id/producticonback"
+                android:layout_width="33.3dp"
+                android:layout_height="33.3dp"
+                android:layout_marginLeft="16.7dp"
+                android:layout_marginTop="38.7dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/back"
+                android:visibility="visible"
+                />
+
+            <ImageView
+                android:id="@+id/productlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14.7dp"
+                android:src="@drawable/logo_white"
+                android:layout_marginTop="42.8dp"/>
+
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/productlargeimage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5.3dp"
+            android:layout_marginLeft="5.3dp"
+            android:layout_marginRight="4.7dp"
+            android:layout_marginBottom="520dp"/>
+
+
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/producttype"
+            android:layout_width="108.7dp"
+            android:layout_height="18.7dp"
+            android:layout_marginTop="3.7dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginStart="26.7dp"/>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginRight="26.7dp"/>
+
+
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/productsize"
+            android:layout_width="108.7dp"
+            android:layout_height="18.7dp"
+            android:layout_marginTop="30.7dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginStart="26.7dp"/>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginRight="26.7dp"/>
+
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/productcolor"
+            android:layout_width="108.7dp"
+            android:layout_height="18.7dp"
+            android:layout_marginTop="30.7dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginStart="26.7dp"/>
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginRight="26.7dp"/>
+
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/productmaterial"
+            android:layout_width="108.7dp"
+            android:layout_height="18.7dp"
+            android:layout_marginTop="30.7dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginStart="26.7dp"/>
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginRight="26.7dp"/>
+
+
+
+        <com.example.user.mysupermarket.LoginButton
+            android:id="@+id/productaddtobasket"
+            android:layout_width="match_parent"
+            android:layout_height="73.3dp"
+            android:background="@color/colorYellowLogin"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginTop="186.7dp"
+            android:layout_marginBottom="29.3dp"
+            android:layout_marginRight="26.7dp"
+            android:text="@string/Dodajukorpu"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
