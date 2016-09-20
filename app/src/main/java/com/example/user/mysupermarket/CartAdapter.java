@@ -8,20 +8,68 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.example.user.mysupermarket.data.DataContainer;
+
 /**
  * Created by User on 19.9.2016.
  */
-public class CartAdapter extends BaseAdapter {
+public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     private Context mContext;
     private LayoutInflater mInflater;
 
 
-    public CartAdapter(LayoutInflater mInflater, Context mContext) {
+    public CartAdapter(Context mContext) {
 
         this.mContext = mContext;
 
         this.mInflater=LayoutInflater.from(mContext);
+    }
+
+    @Override
+    public CartAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = mInflater.inflate(R.layout.cart_recycler_view_items,parent,false);
+
+        ViewHolder viewHolder = new ViewHolder(view);
+
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(final CartAdapter.ViewHolder holder, int position) {
+
+        holder.mPrice.setText("Cena:");
+        holder.mAmount.setText("Kolicina:1");
+
+        holder.mCartIconPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               int number=Character.getNumericValue(holder.mAmount.getText().charAt(9));
+                int newnumber=number++;
+
+                holder.mAmount.setText("Kolicina:"+ number);
+
+
+            }
+        });
+
+        holder.mCartIconMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int number=Character.getNumericValue(holder.mAmount.getText().charAt(9));
+                if(number>1) {
+                    int newnumber = number--;
+
+                    holder.mAmount.setText("Kolicina:" + number);
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return DataContainer.cartProducts.size();
     }
 
 
@@ -49,26 +97,11 @@ public class CartAdapter extends BaseAdapter {
 
 
 
+
+
+
         }
     }
 
-    @Override
-    public int getCount() {
-        return 0;
-    }
 
-    @Override
-    public Object getItem(int position) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
-    }
 }

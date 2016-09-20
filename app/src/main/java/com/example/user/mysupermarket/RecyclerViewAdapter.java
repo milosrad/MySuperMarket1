@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.mysupermarket.data.DataContainer;
+
 /**
  * Created by User on 18.9.2016.
  */
@@ -72,6 +74,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return 6;
+        return DataContainer.homeProducts.size();
     }
 }

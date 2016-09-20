@@ -22,7 +22,7 @@
             >
 
             <ImageView
-                android:id="@+id/producticonback"
+                android:id="@+id/carticonback"
                 android:layout_width="33.3dp"
                 android:layout_height="33.3dp"
                 android:layout_marginLeft="16.7dp"
@@ -35,7 +35,7 @@
             <com.example.user.mysupermarket.TextViewFont
                 android:id="@+id/cartlogo"
                 android:layout_width="62.7dp"
-                android:layout_height="22.7dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="26.7dp"
                 android:text="@string/Korpa"
                 android:layout_marginTop="40dp"
@@ -47,18 +47,68 @@
 
 
 
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp">
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_cart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-
-
-
+            android:layout_height="match_parent">
 
 
 
         </android.support.v7.widget.RecyclerView>
+        </ScrollView>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74.7dp"
+            android:layout_marginTop="13.7dp">
+
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/carttextviewaddress"
+            android:layout_width="226dp"
+            android:layout_height="74.7dp"
+
+            android:layout_marginLeft="26.7dp"/>
+
+        <ImageView
+            android:id="@+id/carticonright"
+            android:layout_width="33.3dp"
+            android:layout_height="33.3dp"
+            android:layout_marginTop="26.7dp"
+            android:layout_marginLeft="69.3dp"
+            android:src="@drawable/right"
+            android:layout_marginBottom="14.7dp"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/linecart1"
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="19.7dp"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginRight="26.7dp"/>
+        
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/textViewtotalprice"
+            android:layout_width="132.7dp"
+            android:layout_height="18.7dp"
+            android:layout_marginTop="20.3dp"
+            android:layout_marginRight="26.7dp"
+            android:layout_gravity="right"/>
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/textViewtotalpricenumber"
+            android:layout_width="132.7dp"
+            android:layout_height="18.7dp"
+            android:layout_marginTop="20.3dp"
+            android:layout_marginRight="26.7dp"
+            android:layout_gravity="right"/>
 
 
 
@@ -70,7 +120,7 @@
             android:layout_height="73.3dp"
             android:background="@color/colorYellowLogin"
             android:layout_marginLeft="26.7dp"
-            android:layout_marginTop="186.7dp"
+            android:layout_marginTop="86.7dp"
             android:layout_marginBottom="29.3dp"
             android:layout_marginRight="26.7dp"
             android:text="@string/Kupi"/>

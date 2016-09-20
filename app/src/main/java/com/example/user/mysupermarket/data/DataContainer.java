@@ -27,4 +27,10 @@ public class DataContainer {
     public static ArrayList<DataHomeProducts> homeProducts;
 
 
+
+    public static ArrayList<DataHomeProducts> cartProducts;
+
+
+
+
 }

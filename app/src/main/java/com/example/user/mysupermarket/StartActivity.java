@@ -218,6 +218,7 @@ public class StartActivity extends MessageActivity {
             public void onResponse(ResponseHomeProducts response) {
 
                 DataContainer.homeProducts=response.data.results;
+                DataContainer.cartProducts=DataContainer.homeProducts;
                 incrementServiceCounter();
 
             }
@@ -236,6 +237,8 @@ public class StartActivity extends MessageActivity {
         DataLoader.addRequest(getApplicationContext(),mRequestToken,REQUEST_TAG);
     //    DataLoader.addRequest(getApplicationContext(),mRequestCategory,REQUEST_TAG);
     //    DataLoader.addRequest(getApplicationContext(),mRequestCity,REQUEST_TAG);
+
+
 
 
 
