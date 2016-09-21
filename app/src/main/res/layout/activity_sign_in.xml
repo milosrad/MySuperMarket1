@@ -105,6 +105,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorYellowLogin"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
             android:hint="@string/Skip"/>
 
 

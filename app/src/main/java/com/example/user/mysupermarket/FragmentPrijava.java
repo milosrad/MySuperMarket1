@@ -139,5 +139,9 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
      //   return inflater.inflate(R.layout.activity_sign_in, container, false);
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        isSignInSkipped=false;
+    }
 }
