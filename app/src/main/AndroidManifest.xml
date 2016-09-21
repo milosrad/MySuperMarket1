@@ -30,6 +30,7 @@
         <activity android:name=".NavigationActivity"/>
         <activity android:name=".ProductActivity"/>
         <activity android:name=".CartActivity"/>
+        <activity android:name=".RegistrationActivity"/>
     </application>
 
 </manifest>

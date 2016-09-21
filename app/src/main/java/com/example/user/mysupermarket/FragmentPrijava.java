@@ -32,6 +32,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
     EditTextFont mPassword;
     LoginButton mSignInButton;
     LoginButton mSignInForgottenPasswordButton;
+    LoginButton mSkipButton;
     TextViewFont mRememberMe;
     CheckBox mRememberMeCheckBox;
 
@@ -39,32 +40,12 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
 
     private final String REQUEST_TAG="Fragment Prijava";
 
-
-
+    public static boolean isSignInSkipped=false;
 
 
 
     View view;
-    /*private String title;
-    private int page;
 
-    // newInstance constructor for creating fragment with arguments
-    public static FragmentPrijava newInstance(int page, String title) {
-        FragmentPrijava fragmentFirst = new FragmentPrijava();
-        Bundle args = new Bundle();
-        args.putInt("someInt", page);
-        args.putString("someTitle", title);
-        fragmentFirst.setArguments(args);
-        return fragmentFirst;
-    }
-
-    // Store instance variables based on arguments passed
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        page = getArguments().getInt("someInt", 0);
-        title = getArguments().getString("someTitle");
-    }  */
 
     // Inflate the view for the fragment based on layout XML
     @Override
@@ -126,18 +107,15 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
 
         mRememberMeCheckBox=(CheckBox)view.findViewById(R.id.remembermecheckbox);
 
-     //   mUserName.setBackgroundColor(getResources().getColor(R.color.colorwhite));
-
 
         mUserName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if(b) {
-                 //   mUserName.setHint("");
                     mUserName.setHint(getResources().getString(R.string.Korisnickoime));
                 }
                 else{
-                //    mUserName.setHint(getResources().getString(R.string.Korisnickoime));
+
                     mUserName.setHint("");
                 }
 
@@ -145,6 +123,15 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
             }
         });
 
+        mSkipButton=(LoginButton)view.findViewById(R.id.skipbutton);
+
+        mSkipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isSignInSkipped=true;
+                startActivity(new Intent(getActivity().getApplicationContext(),HomeActivity.class));
+            }
+        });
 
 
         return view;

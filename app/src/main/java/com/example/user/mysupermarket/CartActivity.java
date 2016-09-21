@@ -1,5 +1,6 @@
 package com.example.user.mysupermarket;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.widget.GridLayoutManager;
@@ -81,6 +82,13 @@ public class CartActivity extends MessageActivity {
         mByuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(FragmentPrijava.isSignInSkipped==true){
+
+                 startActivity(new Intent(getApplicationContext(),RegistrationActivity.class));
+
+
+                }
 
             }
         });

@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorwhite"
-            android:layout_marginLeft="14dp"
+            android:layout_marginLeft="1dp"
             android:layout_marginTop="10dp"
             android:hint="@string/Zapamtime"
             android:paddingLeft="39dp"
@@ -97,7 +97,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="80dp"/>
+            android:layout_marginLeft="20dp"/>
+
+        <com.example.user.mysupermarket.LoginButton
+            android:id="@+id/skipbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellowLogin"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/Skip"/>
+
 
     </LinearLayout>
     

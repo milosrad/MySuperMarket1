@@ -43,6 +43,7 @@
     <string name="Materijal">Materijal:</string>
     <string name="Korpa">Korpa</string>
     <string name="Kupi">Kupi</string>
+    <string name="Skip">Nastavi bez logovanja</string>
 
     <string-array name="menu_options">
 
