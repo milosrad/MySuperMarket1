@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/bg">
+
+    <com.example.user.mysupermarket.LoginButton
+        android:id="@+id/finalcartbuy"
+        android:layout_width="match_parent"
+        android:layout_height="73.3dp"
+        android:background="@color/colorYellowLogin"
+        android:layout_marginLeft="26.7dp"
+        android:layout_marginTop="26.7dp"
+        android:layout_marginBottom="29.3dp"
+        android:layout_marginRight="26.7dp"
+        android:textColor="@color/colorblack"
+        android:text="@string/Kupi"/>
+
+
+</LinearLayout>

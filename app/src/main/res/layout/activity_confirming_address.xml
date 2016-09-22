@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:id="@+id/root">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/confirmingadressicons"
+            android:layout_width="match_parent"
+            android:layout_height="85.3dp"
+            android:visibility="visible"
+
+            >
+
+            <ImageView
+                android:id="@+id/confirmingaddressiconback"
+                android:layout_width="33.3dp"
+                android:layout_height="33.3dp"
+                android:layout_marginLeft="16.7dp"
+                android:layout_marginTop="38.7dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/back"
+                android:visibility="visible"
+                />
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/confirmingaddresslogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26.7dp"
+                android:text="@string/Adresa"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorwhite"
+                android:textSize="22.7sp"
+                android:padding="0.3sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <ImageView
+                android:id="@+id/confirmingaddress_street_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@mipmap/email"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/confirmingaddress_street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Unesitenazivulice"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <ImageView
+                android:id="@+id/confirmingaddress_streetnumber_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@mipmap/email"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/confirmingaddress_streetnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Unesitebrojulice"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <ImageView
+                android:id="@+id/confirmingaddress_aptnumber_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@mipmap/email"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/confirmingaddress_aptnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Unesitebrojstana"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <ImageView
+                android:id="@+id/confirmingaddress_floornumber_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@mipmap/email"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/confirmingaddress_floornumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Unesitebrojsprata"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <ImageView
+                android:id="@+id/confirmingaddress_entrancenumber_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@mipmap/email"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/confirmingaddress_entrancenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Unesitebrojulaza"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/confirmingaddress_city"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Unesiteimegrada"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnercityconfirmingaddress"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+
+
+                >
+
+
+            </Spinner>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <ImageView
+                android:id="@+id/confirmingaddress_postalcode_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@mipmap/email"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/confirmingaddress_postalcodenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/Unesitepostanskibroj"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+        </LinearLayout>
+
+
+
+        <com.example.user.mysupermarket.LoginButton
+            android:id="@+id/confirmingaddress_button"
+            android:layout_width="325dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/colorYellowLogin"
+            android:hint="@string/PotvrditeAdresu"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="10dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

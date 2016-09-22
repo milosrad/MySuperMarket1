@@ -44,6 +44,9 @@
     <string name="Korpa">Korpa</string>
     <string name="Kupi">Kupi</string>
     <string name="Skip">Nastavi bez logovanja</string>
+    <string name="Adresa">Molim Vas unesite podatke o adresi</string>
+    <string name="Finalnakorpa">Konacan izgled Vase korpe </string>
+    <string name="PotvrditeAdresu">Potvrdi</string>
 
     <string-array name="menu_options">
 

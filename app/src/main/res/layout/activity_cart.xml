@@ -66,19 +66,19 @@
             android:layout_marginTop="13.7dp">
 
 
-        <com.example.user.mysupermarket.TextViewFont
+        <!--com.example.user.mysupermarket.TextViewFont
             android:id="@+id/carttextviewaddress"
             android:layout_width="226dp"
             android:layout_height="74.7dp"
 
-            android:layout_marginLeft="26.7dp"/>
+            android:layout_marginLeft="26.7dp"/-->
 
         <ImageView
             android:id="@+id/carticonright"
             android:layout_width="33.3dp"
             android:layout_height="33.3dp"
             android:layout_marginTop="26.7dp"
-            android:layout_marginLeft="69.3dp"
+            android:layout_marginLeft="312dp"
             android:src="@drawable/right"
             android:layout_marginBottom="14.7dp"/>
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74.7dp"
+        android:layout_marginTop="13.7dp">
+
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/finalcarttextviewaddress"
+            android:layout_width="226dp"
+            android:layout_height="74.7dp"
+
+
+            android:layout_marginLeft="26.7dp"/>
+
+        <ImageView
+            android:id="@+id/finalcarticonright"
+            android:layout_width="33.3dp"
+            android:layout_height="33.3dp"
+            android:layout_marginTop="26.7dp"
+            android:layout_marginLeft="62dp"
+            android:src="@drawable/right"
+            android:layout_marginBottom="14.7dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

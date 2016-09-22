@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:id="@+id/root">
+
+    <LinearLayout
+        android:id="@+id/finalcarticons"
+        android:layout_width="match_parent"
+        android:layout_height="85.3dp"
+        android:visibility="visible"
+
+        >
+
+        <ImageView
+            android:id="@+id/finalcarticonback"
+            android:layout_width="33.3dp"
+            android:layout_height="33.3dp"
+            android:layout_marginLeft="16.7dp"
+            android:layout_marginTop="38.7dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/back"
+            android:visibility="visible"
+            />
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/finalcartlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/Finalnakorpa"
+            android:layout_marginTop="38.7dp"
+            android:textColor="@color/colorwhite"
+            android:textSize="22.7sp"
+            android:padding="0.3sp"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/finalcartlistview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </ListView>
+
+</LinearLayout>

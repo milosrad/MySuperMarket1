@@ -47,7 +47,7 @@ public class CartActivity extends MessageActivity {
 
         mTotalSum=(ImageView)findViewById(R.id.carticonright);
 
-        mAddress=(TextViewFont)findViewById(R.id.carttextviewaddress);
+
 
         mTotalPrice=(TextViewFont)findViewById(R.id.textViewtotalprice);
 
@@ -67,11 +67,12 @@ public class CartActivity extends MessageActivity {
 
         mTotalPrice.setText("Ukupno:");
 
+     /*   mAddress=(TextViewFont)findViewById(R.id.carttextviewaddress);
+
         mAddress.setText("Podaci o adresi:");
 
+        mAddress.setTextColor(getResources().getColor(R.color.colorwhite)); */
 
-
-        mAddress.setTextColor(getResources().getColor(R.color.colorwhite));
         mTotalPrice.setTextColor(getResources().getColor(R.color.colorwhite));
 
     }
@@ -87,6 +88,11 @@ public class CartActivity extends MessageActivity {
 
                  startActivity(new Intent(getApplicationContext(),RegistrationActivity.class));
 
+                }
+
+                else {
+
+                    startActivity(new Intent(getApplicationContext(), ConfirmingAddressActivity.class));
 
                 }
 
@@ -100,12 +106,12 @@ public class CartActivity extends MessageActivity {
             }
         });
 
-        mAddress.setOnClickListener(new View.OnClickListener() {
+     /*   mAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        }); */
 
         mIconBack.setOnClickListener(new View.OnClickListener() {
             @Override
