@@ -46,11 +46,12 @@
         <ImageView
             android:id="@+id/productlargeimage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="278.7dp"
             android:layout_marginTop="5.3dp"
             android:layout_marginLeft="5.3dp"
             android:layout_marginRight="4.7dp"
-            android:layout_marginBottom="520dp"/>
+            android:background="@color/colorwhite"
+            />
 
 
 
@@ -58,7 +59,7 @@
             android:id="@+id/producttype"
             android:layout_width="108.7dp"
             android:layout_height="18.7dp"
-            android:layout_marginTop="3.7dp"
+            android:layout_marginTop="30.7dp"
             android:layout_marginLeft="26.7dp"
             android:layout_marginStart="26.7dp"/>
 

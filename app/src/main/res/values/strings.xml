@@ -47,6 +47,7 @@
     <string name="Adresa">Molim Vas unesite podatke o adresi</string>
     <string name="Finalnakorpa">Konacan izgled Vase korpe </string>
     <string name="PotvrditeAdresu">Potvrdi</string>
+    <string name="NacinPlacanja">Odaberite nacin placanja</string>
 
     <string-array name="menu_options">
 
@@ -64,6 +65,16 @@
         <item>Podesavanja</item>
         <item>Profil</item>
         <item>Odjavi se</item>
+
+    </string-array>
+
+    <string-array name="payment_options">
+
+        <item>Novac u gotovini</item>
+        <item>Cekovima gradjana</item>
+        <item>Platnim karticama</item>
+        <item>Ziralno placanje</item>
+
 
     </string-array>
 </resources>

@@ -261,6 +261,42 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10.5dp">
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/confirmingaddress_paymentoptions"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:hint="@string/NacinPlacanja"
+                android:paddingLeft="10dp"
+                android:paddingBottom="16dp"
+
+                />
+
+            <Spinner
+                android:id="@+id/spinnerpaymentoptionsconfirmingaddress"
+                android:layout_width="125dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+
+
+                >
+
+
+            </Spinner>
+
+
+        </LinearLayout>
+
 
 
         <com.example.user.mysupermarket.LoginButton

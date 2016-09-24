@@ -15,7 +15,10 @@ public class DataHomeProducts {
     public double first_price;
     public double price;
 
-    public String thumb;
+    public String image;
+    public String thumb330;
+    public String thumb126;
+    public String thumb80;
 
     public ArrayList<DataHomeProducts> products;
 

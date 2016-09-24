@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.user.mysupermarket.data.DataContainer;
 
 /**
@@ -69,6 +71,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.mTitle.setText(mContext.getString(R.string.Producttitle));
      //   holder.mTitle.setText("Product title");
         holder.mPrice.setText(mContext.getString(R.string.Price));
+
+        Glide.with(mContext).load(DataContainer.homeProducts.get(position).thumb330).thumbnail(0.5f).crossFade()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(holder.mProImage);
 
     }
 

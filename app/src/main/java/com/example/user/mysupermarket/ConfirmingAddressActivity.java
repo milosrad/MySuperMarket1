@@ -20,6 +20,7 @@ public class ConfirmingAddressActivity extends MessageActivity {
     EditTextFont mRegistrationFloorNum;
     EditTextFont mRegistrationEntranceNum;
     TextViewFont mRegistrationCity;
+    TextViewFont mRegistrationPaymentOptions;
     EditTextFont mRegistrationPostalCode;
 
     private ImageView mIconBack;
@@ -29,7 +30,10 @@ public class ConfirmingAddressActivity extends MessageActivity {
 
     ArrayList<String> cityList;
 
+    ArrayList<String>  paymentoptionsList;
+
     private Spinner mSpinnerCity;
+    private Spinner mSpinnerPaymentOptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +41,7 @@ public class ConfirmingAddressActivity extends MessageActivity {
         setContentView(R.layout.activity_confirming_address);
         initComponents();
 
-        addSpinner();
+        addSpinners();
         addListeners();
     }
 
@@ -84,6 +88,12 @@ public class ConfirmingAddressActivity extends MessageActivity {
 
         mConfirmButton=(LoginButton)findViewById(R.id.confirmingaddress_button);
 
+        mRegistrationPaymentOptions=(TextViewFont)findViewById(R.id.confirmingaddress_paymentoptions);
+
+
+
+        mRegistrationPaymentOptions.setHintTextColor(getResources().getColor(R.color.colorwhite));
+
 
 
       /*  mSpinnerCity = (Spinner) findViewById(R.id.spinnercity);
@@ -113,7 +123,7 @@ public class ConfirmingAddressActivity extends MessageActivity {
     }
 
 
-    public void addSpinner(){
+    public void addSpinners(){
 
 
         cityList=new ArrayList<>();
@@ -135,5 +145,16 @@ public class ConfirmingAddressActivity extends MessageActivity {
         spinnerCityAdapter.setDropDownViewResource(R.layout.city_spinner_item);
 
         mSpinnerCity.setAdapter(spinnerCityAdapter);
+
+        mSpinnerPaymentOptions=(Spinner)findViewById(R.id.spinnerpaymentoptionsconfirmingaddress);
+
+
+        mSpinnerPaymentOptions.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+
+        ArrayAdapter<String> paymentOptionsAdapter= new ArrayAdapter<String>(getApplicationContext(),R.layout.city_spinner_item,getResources().getStringArray(R.array.payment_options));
+
+        paymentOptionsAdapter.setDropDownViewResource(R.layout.city_spinner_item);
+
+        mSpinnerPaymentOptions.setAdapter(paymentOptionsAdapter);
     }
 }
