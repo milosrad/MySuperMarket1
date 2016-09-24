@@ -19,6 +19,8 @@ public class DataHomeProducts {
     public String thumb330;
     public String thumb126;
     public String thumb80;
+    public String sizes;
+
 
     public ArrayList<DataHomeProducts> products;
 

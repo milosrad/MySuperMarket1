@@ -57,7 +57,7 @@
 
         <com.example.user.mysupermarket.TextViewFont
             android:id="@+id/producttype"
-            android:layout_width="108.7dp"
+            android:layout_width="188.7dp"
             android:layout_height="18.7dp"
             android:layout_marginTop="30.7dp"
             android:layout_marginLeft="26.7dp"
@@ -76,7 +76,7 @@
 
         <com.example.user.mysupermarket.TextViewFont
             android:id="@+id/productsize"
-            android:layout_width="108.7dp"
+            android:layout_width="188.7dp"
             android:layout_height="18.7dp"
             android:layout_marginTop="30.7dp"
             android:layout_marginLeft="26.7dp"

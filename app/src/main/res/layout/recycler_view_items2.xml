@@ -63,7 +63,7 @@
 
         <com.example.user.mysupermarket.TextViewFont
             android:id="@+id/productprice2"
-            android:layout_width="22.5dp"
+            android:layout_width="82.5dp"
             android:layout_height="12.5dp"
             android:inputType="number"
             android:textColor="@color/colorblack"
@@ -75,8 +75,8 @@
 
         <RelativeLayout
             android:id="@+id/productbuylayout"
-            android:layout_width="23.5dp"
-            android:layout_height="23.5dp"
+            android:layout_width="53.5dp"
+            android:layout_height="63.5dp"
             android:background="@color/colorYellowLogin"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="89dp"

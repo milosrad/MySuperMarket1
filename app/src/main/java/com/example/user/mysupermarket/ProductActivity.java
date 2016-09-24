@@ -1,9 +1,12 @@
 package com.example.user.mysupermarket;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.user.mysupermarket.data.DataContainer;
 
 /**
  * Created by User on 19.9.2016.
@@ -16,6 +19,7 @@ public class ProductActivity extends MessageActivity {
     private TextViewFont mProductMaterial;
 
     private ImageView mIconBack;
+    private ImageView mProductImage;
 
     private LoginButton mAddtoBasketButton;
 
@@ -35,6 +39,7 @@ public class ProductActivity extends MessageActivity {
     private void initComponents(){
 
         mIconBack=(ImageView)findViewById(R.id.producticonback);
+        mProductImage=(ImageView)findViewById(R.id.productlargeimage);
 
 
         mProductType=(TextViewFont)findViewById(R.id.producttype);
@@ -45,6 +50,7 @@ public class ProductActivity extends MessageActivity {
 
 
         mProductType.setText(getResources().getString(R.string.Muskacipela));
+
         mProductSize.setText(getResources().getString(R.string.Velicina));
         mProductColor.setText(getResources().getString(R.string.Boja));
         mProductMaterial.setText(getResources().getString(R.string.Materijal));
@@ -55,6 +61,21 @@ public class ProductActivity extends MessageActivity {
         mProductSize.setTextColor(getResources().getColor(R.color.colorwhite));
         mProductColor.setTextColor(getResources().getColor(R.color.colorwhite));
         mProductMaterial.setTextColor(getResources().getColor(R.color.colorwhite));
+
+        Bundle extras = getIntent().getExtras();
+        Bitmap bmp = (Bitmap) extras.getParcelable("imagebitmap");
+
+      //  String size=getIntent().getStringExtra("sizes");
+
+        String size=extras.getString("size");
+
+        String name=extras.getString("name");
+
+        mProductSize.setText("Velicina: "+size);
+
+        mProductType.setText(name);
+
+        mProductImage.setImageBitmap(bmp );
 
 
     }
