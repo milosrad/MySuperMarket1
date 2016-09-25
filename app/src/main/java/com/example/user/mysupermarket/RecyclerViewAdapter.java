@@ -118,6 +118,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Intent intent= new Intent(mContext,CartActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
+                holder.mProImage.buildDrawingCache();
+                Bitmap image= holder.mProImage.getDrawingCache();
+
+                Bundle extras = new Bundle();
+                extras.putParcelable("imagebitmap", image);
+                intent.putExtras(extras);
+
                 mContext.startActivity(intent);
             }
         });
@@ -139,6 +146,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 Intent intent= new Intent(mContext,CartActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                holder.mProImage.buildDrawingCache();
+                Bitmap image= holder.mProImage.getDrawingCache();
+
+                Bundle extras = new Bundle();
+                extras.putParcelable("imagebitmap", image);
+                intent.putExtras(extras);
 
                 mContext.startActivity(intent);
 

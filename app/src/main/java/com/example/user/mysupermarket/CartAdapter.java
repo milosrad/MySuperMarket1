@@ -1,8 +1,13 @@
 package com.example.user.mysupermarket;
 
+import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.database.CharArrayBuffer;
+import android.graphics.Bitmap;
 import android.icu.math.BigDecimal;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -132,6 +137,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             }
         });
 
+      /*  Intent intent = ((Activity)mContext).getIntent();
+        Bundle extras =intent.getExtras();
+        Bitmap bmp = (Bitmap) extras.getParcelable("imagebitmap");
+
+        holder.mProImage.setImageBitmap(bmp); */
+
+
     }
 
     @Override
@@ -140,12 +152,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     }
 
 
-    public  class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextViewFont mType;
         public TextViewFont mPrice;
         public TextViewFont mAmount;
-        public ImageView mProImage;
+        public static ImageView mProImage;
         public ImageView mCartIconMinus;
         public ImageView mCartIconPlus;
 
@@ -163,11 +175,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             mCartIconPlus=(ImageView)v.findViewById(R.id.carticonplus);
 
 
-
-
-
-
         }
+
+        public static ImageView getmProImage(){return mProImage;}
     }
 
 

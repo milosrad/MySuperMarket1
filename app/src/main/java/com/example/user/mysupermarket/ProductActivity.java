@@ -95,7 +95,17 @@ public class ProductActivity extends MessageActivity {
         mAddtoBasketButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),CartActivity.class));
+
+                Intent intent = new Intent(getApplicationContext(),CartActivity.class);
+
+                mProductImage.buildDrawingCache();
+                Bitmap image= mProductImage.getDrawingCache();
+
+                Bundle extras = new Bundle();
+                extras.putParcelable("imagebitmap", image);
+                intent.putExtras(extras);
+
+                startActivity(intent);
             }
         });
     }

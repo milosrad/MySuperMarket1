@@ -1,6 +1,7 @@
 package com.example.user.mysupermarket;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.widget.GridLayoutManager;
@@ -27,7 +28,7 @@ public class CartActivity extends MessageActivity {
 
     private RecyclerView mRecyclerView;
 
-    private CartAdapter mAdapter;
+    public CartAdapter mAdapter;
 
     private RecyclerView.LayoutManager mLayoutManager;
 
@@ -74,6 +75,12 @@ public class CartActivity extends MessageActivity {
         mAddress.setTextColor(getResources().getColor(R.color.colorwhite)); */
 
         mTotalPrice.setTextColor(getResources().getColor(R.color.colorwhite));
+
+        Intent intent = getIntent();
+        Bundle extras =intent.getExtras();
+        Bitmap bmp = (Bitmap) extras.getParcelable("imagebitmap");
+
+       // CartAdapter.ViewHolder.mProImage.setImageBitmap(bmp);
 
     }
 
