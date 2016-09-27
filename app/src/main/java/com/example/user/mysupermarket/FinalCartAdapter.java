@@ -67,6 +67,9 @@ public class FinalCartAdapter extends BaseAdapter {
 
             recyclerView.setAdapter(cartAdapter);
 
+
+
+
             //    textView.setText(getItem(position).toString());
 
         }
@@ -129,6 +132,8 @@ public class FinalCartAdapter extends BaseAdapter {
             });
 
         }
+
+        
 
         return row;
     }
