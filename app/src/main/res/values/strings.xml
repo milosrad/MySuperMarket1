@@ -48,6 +48,10 @@
     <string name="Finalnakorpa">Konacan izgled Vase korpe </string>
     <string name="PotvrditeAdresu">Potvrdi</string>
     <string name="NacinPlacanja">Odaberite nacin placanja</string>
+    <string name="Popunitepolja">Popunite sva polja</string>
+    <string name="LoginIncorrect">Uneti podaci su neispravni</string>
+    <string name="PosaljiEmailadresu">Posalji</string>
+    <string name="Odustani">Odustani</string>
 
     <string-array name="menu_options">
 

@@ -15,6 +15,8 @@ public class ResponseLogin {
 
         public ArrayList<DataLogin> results;
 
+     //   public DataLogin results;
+
         public String token;
         public String login_token;
         public String incorrect__logins;

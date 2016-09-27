@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg">
+
+    <com.example.user.mysupermarket.EditTextFont
+        android:id="@+id/dialog_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="@string/Zaboravljenalozinka"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorwhite"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/dialog_info">
+
+        <com.example.user.mysupermarket.LoginButton
+            android:id="@+id/dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/cancel_color"
+            android:text="@string/Odustani"/>
+
+        <com.example.user.mysupermarket.LoginButton
+            android:id="@+id/dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/colorYellowLogin"
+            android:text="@string/PosaljiEmailadresu"
+            />
+    </LinearLayout>
+</RelativeLayout>

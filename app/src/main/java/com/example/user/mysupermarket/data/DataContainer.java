@@ -21,8 +21,9 @@ public class DataContainer {
     public static ArrayList<DataCity>cities;
     public static ArrayList<DataReservation>reservations;
     public static ArrayList<DataSignUp>dataSignUps;
-    public static ArrayList<DataLogin>dataLogins;
+    public static ArrayList<DataLogin>dataLogin;
 
+  //  public static DataLogin dataLogin;
     public static ArrayList<DataForgotPassword> forgottenPasswordEmail;
     public static ArrayList<DataHomeProducts> homeProducts;
 
