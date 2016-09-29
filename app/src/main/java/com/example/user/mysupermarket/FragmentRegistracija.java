@@ -5,16 +5,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.SwitchCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -25,6 +31,8 @@ import com.example.user.mysupermarket.networking.DataLoader;
 import com.example.user.mysupermarket.networking.GsonRequest;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by cubesschool5 on 9/7/16.
@@ -55,8 +63,11 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
     EditTextFont mRegistrationAptNum;
     EditTextFont mRegistrationFloorNum;
     EditTextFont mRegistrationEntranceNum;
+    EditTextFont mRegistrationCompanyName;
+    EditTextFont mRegistrationCompanyPIB;
     TextViewFont mRegistrationCity;
     EditTextFont mRegistrationPostalCode;
+
     TextViewFont mRegistrationNewsletter;
     TextViewFont mRegistrationDate;
     TextViewFont mRegistrationMonth;
@@ -64,17 +75,31 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
     TextViewFont mRegistrationGender;
     TextViewFont mRegistrationGenderMale;
     TextViewFont mRegistrationGenderFemale;
+    TextViewFont mRegistrationCompany;
+
     CheckBox mCheckBoxNewsletter;
+
     RadioButton mRadioButtonMale;
     RadioButton mRadioButtonFemale;
+
     LoginButton mTermsOfUseButton;
     LoginButton mSignUpButton;
+
+    SwitchCompat mCompanySwitch;
+
+
+    LinearLayout mCompanyLayout;
+    LinearLayout mRegistrationLayout;
+
+    ProgressBar mProgress;
 
 
     ArrayList<String> cityList;
     ArrayList<String> dateList;
     ArrayList<String> monthList;
     ArrayList<String> yearList;
+
+    private Map<String, String> params;
 
     View view;
 
@@ -217,6 +242,25 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         mRegistrationGenderFemale.setHint(getResources().getString(R.string.PolZenski));
         mRegistrationGenderFemale.setHintTextColor(getResources().getColor(R.color.colorwhite));
 
+        mRegistrationCompany = (TextViewFont) view.findViewById(R.id.textviewregistration_company);
+
+        mRegistrationCompany.setHint(getResources().getString(R.string.PravnoLice));
+        mRegistrationCompany.setHintTextColor(getResources().getColor(R.color.colorwhite));
+
+        mCompanySwitch= (SwitchCompat)view.findViewById(R.id.switch_registration_company);
+
+        mRegistrationCompanyName=(EditTextFont)view.findViewById(R.id.edittextregistration_company);
+        mRegistrationCompanyName.setHint(getResources().getString(R.string.Nazivkompanije));
+        mRegistrationCompanyName.setHintTextColor(getResources().getColor(R.color.colorwhite));
+
+        mRegistrationCompanyPIB=(EditTextFont)view.findViewById(R.id.edittextregistration_companypib);
+        mRegistrationCompanyPIB.setHint(getResources().getString(R.string.PIB));
+        mRegistrationCompanyPIB.setHintTextColor(getResources().getColor(R.color.colorwhite));
+
+        mCompanyLayout= (LinearLayout) view.findViewById(R.id.registration_company_layout);
+        mRegistrationLayout= (LinearLayout) view.findViewById(R.id.registration_layout);
+
+
 
         mSpinnerCity = (Spinner) view.findViewById(R.id.spinnercity);
 
@@ -255,7 +299,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         });
 
 
-        mRequestSignUp=new GsonRequest<ResponseSignUp>(Constant.SIGNUP_URL + "?token=" + DataContainer.TOKEN, Request.Method.POST, ResponseSignUp.class, new Response.Listener<ResponseSignUp>() {
+       /* mRequestSignUp=new GsonRequest<ResponseSignUp>(Constant.SIGNUP_URL + "?token=" + DataContainer.TOKEN, Request.Method.POST, ResponseSignUp.class, new Response.Listener<ResponseSignUp>() {
             @Override
             public void onResponse(ResponseSignUp response) {
 
@@ -269,7 +313,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
                 Toast.makeText(getContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
 
             }
-        });
+        }); */
 
         mSignUpButton=(LoginButton)view.findViewById(R.id.registration_button);
 
@@ -278,10 +322,30 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
             public void onClick(View view) {
                 Toast.makeText(getActivity().getApplicationContext(),"SIGN IN",Toast.LENGTH_LONG).show();
 
-                DataLoader.addRequest(getActivity().getApplicationContext(), mRequestSignUp, REQUEST_TAG);
+             //   DataLoader.addRequest(getActivity().getApplicationContext(), mRequestSignUp, REQUEST_TAG);
 
             //    startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivity.class));
+
+                signUpRequest();
                 startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivityExp.class));
+
+            }
+        });
+
+        mCompanySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b){
+
+                    mCompanyLayout.setVisibility(View.VISIBLE);
+                }
+
+                else {
+                    mCompanyLayout.setVisibility(View.GONE);
+                }
+
+
 
             }
         });
@@ -409,6 +473,81 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
 
 
+
+
+    }
+
+
+    private void signUpRequest() {
+        mProgress.setVisibility(View.VISIBLE);
+        mRegistrationLayout.setBackgroundColor(getResources().getColor(R.color.transparent_error));
+        mRequestSignUp = new GsonRequest<ResponseSignUp>(Constant.SIGNUP_URL, Request.Method.POST, ResponseSignUp.class, new Response.Listener<ResponseSignUp>() {
+            @Override
+            public void onResponse(ResponseSignUp response) {
+                Log.i("Response", response.toString());
+                DataContainer.dataSignUps = response.data.results;
+
+                if (response.data.error != "") {
+                    Toast.makeText(getContext(), response.data.error, Toast.LENGTH_SHORT).show();
+                } else {
+
+
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.i("error", error.toString());
+
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                params = new HashMap<String, String>();
+
+                if (mCompanyLayout.getVisibility() == View.VISIBLE) {
+                    params.put("user_type", "company");
+                    params.put("company_name", mRegistrationCompanyName.getText().toString());
+                    params.put("pib", mRegistrationCompanyPIB.getText().toString());
+                } else {
+                    params.put("user_type", "buyer");
+                    params.put("company_name", "");
+                    params.put("pib", "");
+                }
+
+                params.put("first_name", mRegistrationName.getText().toString());
+                params.put("last_name", mRegistrationSurname.getText().toString());
+                params.put("email", mRegistrationEmail.getText().toString());
+                params.put("password", mRegistrationPassword.getText().toString());
+                params.put("password_retype", mRegistrationPasswordRetype.getText().toString());
+
+                params.put("cell_phone", mRegistrationCellNum.getText().toString());
+                params.put("phone", mRegistrationPhone.getText().toString());
+                params.put("fax", mRegistrationFax.getText().toString());
+
+                params.put("street", mRegistrationStreet.getText().toString());
+                params.put("number", mRegistrationStreetNum.getText().toString());
+                params.put("appartement", mRegistrationAptNum.getText().toString());
+                params.put("floor", mRegistrationFloorNum.getText().toString());
+                params.put("entrance", mRegistrationEntranceNum.getText().toString());
+
+                params.put("city", (String) mSpinnerCity.getSelectedItem());
+                params.put("postal_code", mRegistrationPostalCode.getText().toString());
+
+                params.put("newsletter", mCheckBoxNewsletter.isChecked() ? "1" : "0");
+
+                params.put("day", (String) mSpinnerDate.getSelectedItem());
+                params.put("month", (String) mSpinnerMonth.getSelectedItem());
+                params.put("year", (String) mSpinnerYear.getSelectedItem());
+
+                params.put("gender", mRadioButtonMale.isChecked() ? "1" : "2");
+
+                params.put("token", DataContainer.TOKEN);
+                return params;
+            }
+        };
+
+        DataLoader.addRequest(getActivity(), mRequestSignUp, REQUEST_TAG);
 
 
     }

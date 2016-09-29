@@ -29,11 +29,11 @@ public class NavigationActivity extends MessageActivity {
     private void initComponents(){
 
         mDlMenu=(DrawerLayout)findViewById(R.id.drawer_layout);
-        mLVNavigation=(ListView)findViewById(R.id.listViewNavigation);
+     //   mLVNavigation=(ListView)findViewById(R.id.listViewNavigation);
         mIconMenu=(ImageView)findViewById(R.id.navigationiconmenu);
 
         mAdapter= new NavigationAdapter(getApplicationContext());
-        mLVNavigation.setAdapter(mAdapter);
+     //   mLVNavigation.setAdapter(mAdapter);
     }
 
     private void addListeners(){

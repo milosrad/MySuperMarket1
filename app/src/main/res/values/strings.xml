@@ -52,6 +52,9 @@
     <string name="LoginIncorrect">Uneti podaci su neispravni</string>
     <string name="PosaljiEmailadresu">Posalji</string>
     <string name="Odustani">Odustani</string>
+    <string name="PravnoLice">Pravno lice</string>
+    <string name="PIB">PIB</string>
+    <string name="Nazivkompanije">Naziv kompanije</string>
 
     <string-array name="menu_options">
 

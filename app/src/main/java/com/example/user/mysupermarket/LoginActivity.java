@@ -3,9 +3,11 @@ package com.example.user.mysupermarket;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
@@ -16,12 +18,17 @@ import android.provider.MediaStore;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -48,6 +55,8 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
     private ImageView mLogo,mPhoto;
 
     private LinearLayout mRegistrationIcons;
+
+    private SharedPreferences sharedPreferences;
 
 
     private Uri outputFileUri;
@@ -197,6 +206,7 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
 
 
 
+
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
@@ -204,15 +214,39 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
         switch(requestCode) {
             case 0:
                 if(resultCode == RESULT_OK){
-                    Uri selectedImage = imageReturnedIntent.getData();
-                    mPhoto.setImageURI(selectedImage);
+                   /* Uri selectedImage = imageReturnedIntent.getData();
+                    mPhoto.setImageURI(selectedImage); */
+                    Uri selectedImage=imageReturnedIntent.getData();
+                    Glide.with(getApplicationContext()).load(selectedImage).asBitmap().centerCrop().into(new BitmapImageViewTarget(mPhoto){
+
+                        @Override
+                        protected void setResource(Bitmap resource) {
+
+                            RoundedBitmapDrawable circularBitmapDrawable= RoundedBitmapDrawableFactory.create(getApplicationContext().getResources(),resource);
+                            circularBitmapDrawable.setCircular(true);
+                            mPhoto.setImageDrawable(circularBitmapDrawable);
+                        }
+                    });
                 }
 
                 break;
             case 1:
                 if(resultCode == RESULT_OK){
-                    Uri selectedImage = imageReturnedIntent.getData();
-                    mPhoto.setImageURI(selectedImage);
+                  /*  Uri selectedImage = imageReturnedIntent.getData();
+                    mPhoto.setImageURI(selectedImage); */
+
+                    Uri selectedImage=imageReturnedIntent.getData();
+                    Glide.with(getApplicationContext()).load(selectedImage).asBitmap().centerCrop().into(new BitmapImageViewTarget(mPhoto){
+
+                        @Override
+                        protected void setResource(Bitmap resource) {
+                            RoundedBitmapDrawable circularBitmapDrawable= RoundedBitmapDrawableFactory.create(getApplicationContext().getResources(),resource);
+                            circularBitmapDrawable.setCircular(true);
+                            mPhoto.setImageDrawable(circularBitmapDrawable);
+                        }
+                    });
+
+
                 }
                 break;
         }

@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/registration_layout">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -678,6 +679,75 @@
 
 
         </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30.5dp">
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/textviewregistration_company"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+
+                android:hint="@string/PravnoLice"
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_registration_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="right"
+                >
+
+
+            </android.support.v7.widget.SwitchCompat>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registration_company_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30.5dp"
+            android:visibility="gone">
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/edittextregistration_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="14dp"
+
+
+                android:paddingLeft="39dp"
+                android:paddingBottom="16dp"
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/edittextregistration_companypib"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="right"
+                >
+
+
+            </com.example.user.mysupermarket.EditTextFont>
+
+
+        </LinearLayout>
 
 
         <com.example.user.mysupermarket.LoginButton
