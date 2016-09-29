@@ -280,7 +280,9 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
                 DataLoader.addRequest(getActivity().getApplicationContext(), mRequestSignUp, REQUEST_TAG);
 
-                startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivity.class));
+            //    startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivity.class));
+                startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivityExp.class));
+
             }
         });
 

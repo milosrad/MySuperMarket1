@@ -33,6 +33,7 @@
         <activity android:name=".RegistrationActivity"/>
         <activity android:name=".ConfirmingAddressActivity"/>
         <activity android:name=".FinalCartActivity"/>
+        <activity android:name=".NavigationActivityExp"/>
     </application>
 
 </manifest>
