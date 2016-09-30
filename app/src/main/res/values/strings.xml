@@ -55,6 +55,10 @@
     <string name="PravnoLice">Pravno lice</string>
     <string name="PIB">PIB</string>
     <string name="Nazivkompanije">Naziv kompanije</string>
+    <string name="InvalidDate">Izabrani mesec nema taj broj dana.</string>
+    <string name="BadPhonelength">Proverite uneti broj telefona</string>
+    <string name="Radiogroupcheck">Izaberite pol</string>
+    <string name="Missingfields">Niste popunili sva polja.</string>
 
     <string-array name="menu_options">
 

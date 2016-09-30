@@ -16,6 +16,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -81,6 +82,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
     RadioButton mRadioButtonMale;
     RadioButton mRadioButtonFemale;
+    RadioGroup mRadioGroupGender;
 
     LoginButton mTermsOfUseButton;
     LoginButton mSignUpButton;
@@ -262,6 +264,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
 
 
+
         mSpinnerCity = (Spinner) view.findViewById(R.id.spinnercity);
 
         mSpinnerCity.setBackgroundColor(getResources().getColor(R.color.colorwhite));
@@ -326,6 +329,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
             //    startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivity.class));
 
+                checkFields();
                 signUpRequest();
                 startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivityExp.class));
 
@@ -550,6 +554,29 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         DataLoader.addRequest(getActivity(), mRequestSignUp, REQUEST_TAG);
 
 
+    }
+
+
+    private void checkFields(){
+
+
+        if (mSpinnerDate.getSelectedItem().toString().equalsIgnoreCase("31") && (mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("02") || mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("04") ||
+                mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("06") || mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("09") || mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("11"))) {
+            Toast.makeText(getActivity(), R.string.InvalidDate, Toast.LENGTH_SHORT).show();
+        } else if (mSpinnerDate.getSelectedItem().toString().equalsIgnoreCase("30") && mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("02")) {
+            Toast.makeText(getActivity(), R.string.InvalidDate, Toast.LENGTH_SHORT).show();
+        } else if (mRegistrationName.getText().toString().equalsIgnoreCase(" ") || mRegistrationSurname.getText().toString().equalsIgnoreCase("") || mRegistrationCellNum.getText().toString().equalsIgnoreCase("")
+                || mRegistrationPhone.getText().toString().equalsIgnoreCase("") || mRegistrationFax.getText().toString().equalsIgnoreCase("") || mRegistrationStreet.getText().toString().equalsIgnoreCase("") ||
+                mRegistrationStreetNum.getText().toString().equalsIgnoreCase("") || mRegistrationAptNum.getText().toString().equalsIgnoreCase("") || mRegistrationFloorNum.getText().toString().equalsIgnoreCase("") || mRegistrationEntranceNum.getText().toString().equalsIgnoreCase("") ||
+                mSpinnerCity.getSelectedItem().toString().equalsIgnoreCase("Izaberite grad:") || mRegistrationPassword.getText().toString().equalsIgnoreCase("") || mRegistrationPasswordRetype.getText().toString().equalsIgnoreCase("")) {
+            Toast.makeText(getActivity(), R.string.Missingfields, Toast.LENGTH_SHORT).show();
+        } else if (!mRegistrationEmail.getText().toString().trim().matches("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")) {
+            mRegistrationEmail.setError("Invalid Email Address");
+        } else if (mRegistrationPhone.getText().toString().length() < 5 || mRegistrationCellNum.getText().toString().length() < 5) {
+            Toast.makeText(getActivity(), R.string.BadPhonelength, Toast.LENGTH_SHORT).show();
+        } else if (!mRadioButtonMale.isChecked() && !mRadioButtonFemale.isChecked()) {
+            Toast.makeText(getActivity(), R.string.Radiogroupcheck, Toast.LENGTH_SHORT).show();
+        }
     }
 
 
