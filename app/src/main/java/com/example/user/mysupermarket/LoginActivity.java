@@ -86,7 +86,7 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
 
         addListeners();
 
-        logoAnimation();
+
 
     //    mPageTabStrip.setTabIndicatorColor(getResources().getColor(R.color.colorYellowLogin));
 

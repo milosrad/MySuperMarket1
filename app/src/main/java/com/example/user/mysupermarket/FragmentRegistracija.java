@@ -331,7 +331,8 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
                 checkFields();
                 signUpRequest();
-                startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivityExp.class));
+            //    startActivity(new Intent(getActivity().getApplicationContext(),NavigationActivityExp.class));
+                startActivity(new Intent(getActivity().getApplicationContext(),MainActivity.class));
 
             }
         });
@@ -483,7 +484,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
 
     private void signUpRequest() {
-        mProgress.setVisibility(View.VISIBLE);
+     //   mProgress.setVisibility(View.VISIBLE);
         mRegistrationLayout.setBackgroundColor(getResources().getColor(R.color.transparent_error));
         mRequestSignUp = new GsonRequest<ResponseSignUp>(Constant.SIGNUP_URL, Request.Method.POST, ResponseSignUp.class, new Response.Listener<ResponseSignUp>() {
             @Override
