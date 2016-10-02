@@ -24,6 +24,8 @@ import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -58,12 +60,16 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
 
     private SharedPreferences sharedPreferences;
 
+    private LinearLayout mLinearAnimLayout;
+
 
     private Uri outputFileUri;
 
     private static int SELECT_PICTURE_REQUEST_CODE=100;
 
     private TabLayout.OnTabSelectedListener mTabLayout1;
+
+    private Animation animation, ViewPagerAnimation, fadeInAnimation, fadeOutAnimmation, fadeInLogoAnimation;
 
 
 
@@ -79,6 +85,8 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
         initComponents();
 
         addListeners();
+
+        logoAnimation();
 
     //    mPageTabStrip.setTabIndicatorColor(getResources().getColor(R.color.colorYellowLogin));
 
@@ -319,6 +327,35 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
         }
 
     } */
+
+    private void logoAnimation() {
+        animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.down_top);
+        animation.setFillAfter(true);
+        mLogo.setAnimation(animation);
+
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                ViewPagerAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.viewpager_up);
+                mLinearAnimLayout.setVisibility(View.VISIBLE);
+                ViewPagerAnimation.setFillAfter(true);
+                mLinearAnimLayout.setAnimation(ViewPagerAnimation);
+
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+    }
 
 
     @Override

@@ -1,0 +1,46 @@
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:background="@color/colorwhite"
+        android:layout_marginTop="74.7dp"
+        android:layout_marginLeft="50dp"
+       >
+
+
+
+    </LinearLayout>
+
+    <com.example.user.mysupermarket.LoginButton
+        android:id="@+id/closeButton"
+        android:layout_width="346.7dp"
+        android:layout_height="73.3dp"
+        android:background="@color/colorYellowLogin"
+        android:layout_marginBottom="70.7dp"
+        android:layout_marginTop="445.3dp"
+        android:layout_marginLeft="26.7dp"
+        android:layout_marginRight="26.7dp"/>
+
+    <!-- This initially-hidden ImageView will hold the expanded/zoomed version of the
+         images above. Without transformations applied, it takes up the entire screen.
+         To achieve the "zoom" animation, this view's bounds are animated from the
+         bounds of the thumbnail buttons above, to its final laid-out bounds. The implementation
+         of this animation is in the ZoomActivity class. -->
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:contentDescription="@string/description_zoom_touch_close"
+        android:layout_gravity="center_horizontal|top" />
+
+</FrameLayout>

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.example.user.mysupermarket.tools.BusProvider;
 import com.example.user.mysupermarket.tools.MessageObject;
@@ -21,6 +23,9 @@ public class MessageActivity extends AppCompatActivity {
 
     private Object busEventListener;
     private LayoutInflater mInflater;
+
+    private Animation AnimError, AnimErrorBack;
+    public static final int MESSAGE_ERROR = 0, MESSAGE_SUCCESS = 1, MESSAGE_INFO = 2;
 
     private ViewGroup mRootView;
 
@@ -52,13 +57,37 @@ public class MessageActivity extends AppCompatActivity {
 
                 mTextViewMessage.setText(messageObject.stringResource);
 
+                switch (messageObject.type){
+
+                    case MESSAGE_ERROR:
+                        mTextViewMessage.setTextColor(getResources().getColor(R.color.message_error));
+                        break;
+                    case MESSAGE_INFO:
+                        mTextViewMessage.setTextColor(getResources().getColor(R.color.colorYellowLogin));
+                        break;
+                    case MESSAGE_SUCCESS:
+                        mTextViewMessage.setTextColor(getResources().getColor(R.color.message_success));
+                        break;
+                    default:
+                        break;
+
+
+
+
+                }
+
 
                 mRootView.addView(mMessage);
+                AnimError = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.top_down);
+                mMessage.setAnimation(AnimError);
+                AnimError.setFillAfter(true);
 
                 mRootView.postDelayed(new Runnable() {
                     @Override
                     public void run() {
 
+                        AnimErrorBack = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.error_message_up);
+                        mMessage.setAnimation(AnimErrorBack);
                         mMessage.setVisibility(View.GONE);
 
                     }
