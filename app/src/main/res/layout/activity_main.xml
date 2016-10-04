@@ -36,7 +36,20 @@
                 android:src="@drawable/menu"
                 android:layout_alignBottom="@+id/imageViewSupermarket"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="12.5dp"/>
+
+            <ImageView
+                android:id="@+id/homeiconsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@drawable/search"
+                android:layout_marginLeft="25dp"
+                android:layout_alignTop="@+id/imageViewHam"
+                android:layout_toStartOf="@+id/imageViewBasket"
+                android:layout_alignBottom="@+id/imageViewBasket"
+                android:layout_toLeftOf="@+id/imageViewBasket" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -144,7 +157,7 @@
                     android:layout_alignStart="@+id/textViewUserName"
                     android:textSize="18sp"
 
-                    />
+                    android:layout_alignLeft="@+id/textViewUserName" />
             </RelativeLayout>
             <ExpandableListView
                 android:layout_below="@id/profil"

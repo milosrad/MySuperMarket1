@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/profileicons"
+            android:layout_width="500dp"
+            android:layout_height="85.3dp"
+            android:visibility="visible"
+            android:background="@color/menuopacity"
+            >
+
+            <ImageView
+                android:id="@+id/profileiconmenu"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="16.7dp"
+                android:layout_marginTop="38.7dp"
+                android:layout_marginBottom="13.3dp"
+                android:src="@drawable/menu"
+                android:visibility="visible"
+                />
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/profilelogo"
+                android:layout_width="53.3dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26.7dp"
+                android:src="@drawable/logo_white"
+                android:layout_marginTop="40dp"
+                android:text="@string/Profile"
+                android:textColor="@color/colorwhite"
+                android:textSize="22.7sp"/>
+
+            <ImageView
+                android:id="@+id/profileiconcamera"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="184dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginRight="22.7dp"
+                android:visibility="visible"
+                android:src="@mipmap/add"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+
+        <ImageView
+            android:id="@+id/profileimage"
+            android:layout_width="133.3dp"
+            android:layout_height="133.3dp"
+
+            android:layout_marginTop="41.3dp"
+            android:layout_gravity="center"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="53.3dp"
+            >
+
+            <ImageView
+                android:id="@+id/profile_username_image"
+                android:layout_width="33.3dp"
+                android:layout_height="32.9dp"
+                android:layout_marginLeft="26.7dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/username"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="25dp"
+                android:hint="@string/Korisnickoime"
+                android:textColorHint="@color/colorwhite"
+                android:paddingLeft="3dp"
+                android:paddingBottom="16dp"
+                android:textAlignment="gravity"
+                android:textSize="18.7sp"
+                />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@color/underlineopacity"
+            android:layout_marginTop="19.4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="48.5dp">
+
+            <ImageView
+                android:id="@+id/profile_email_image"
+                android:layout_width="33.3dp"
+                android:layout_height="32.9dp"
+                android:layout_marginLeft="26.7dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/email"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/profile_email"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="19.3dp"
+                android:layout_marginTop="25dp"
+                android:hint="@string/EMail"
+                android:textColorHint="@color/colorwhite"
+                android:paddingLeft="3dp"
+                android:paddingBottom="16dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@color/underlineopacity"
+            android:layout_marginTop="19.4dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30.5dp">
+
+            <ImageView
+                android:id="@+id/profile_password_image"
+                android:layout_width="33.3dp"
+                android:layout_height="33.3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/password"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/profile_password"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="25dp"
+                android:hint="@string/Lozinka"
+                android:paddingLeft="3dp"
+                android:paddingBottom="16dp"
+                android:inputType="textPassword"
+                android:textColorHint="@color/colorwhite"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@color/underlineopacity"
+            android:layout_marginTop="19.4dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30.5dp">
+
+            <ImageView
+                android:id="@+id/profile_birthday_image"
+                android:layout_width="33.3dp"
+                android:layout_height="33.3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/birthday"
+
+                />
+
+            <com.example.user.mysupermarket.EditTextFont
+                android:id="@+id/profile_birthday"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="25dp"
+                android:hint="@string/Birthday"
+                android:paddingLeft="3dp"
+                android:paddingBottom="16dp"
+
+                android:textColorHint="@color/colorwhite"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@color/underlineopacity"
+            android:layout_marginTop="19.4dp"/>
+
+
+        <com.example.user.mysupermarket.LoginButton
+            android:layout_marginTop="40dp"
+            android:id="@+id/changeprofilebutton"
+            android:layout_width="match_parent"
+            android:layout_height="73.3dp"
+            android:background="@color/colorYellowLogin"
+            android:layout_marginLeft="26.7dp"
+            android:layout_marginRight="26.7dp"
+            android:layout_marginBottom="70.7dp"
+            android:text="@string/ChangeProfile"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/profilenvView"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile"
+                >
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imageViewUserPicture"
+
+                    />
+
+                <com.example.user.mysupermarket.TextViewFont
+                    android:id="@+id/textViewUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imageViewUserPicture"
+                    android:text="user"
+                    android:textSize="27sp"
+                    android:layout_marginLeft="15dp"
+                    />
+
+                <com.example.user.mysupermarket.TextViewFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userEmail"
+                    android:layout_below="@id/textViewUserName"
+                    android:text="email"
+                    android:layout_alignStart="@+id/textViewUserName"
+                    android:textSize="18sp"
+
+                    android:layout_alignLeft="@+id/textViewUserName" />
+            </RelativeLayout>
+            <ExpandableListView
+                android:layout_below="@id/profile"
+                android:id="@+id/extendibleListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:groupIndicator="@null"
+                android:dividerHeight="0dp"
+                android:divider="@null"
+                />
+        </RelativeLayout>
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

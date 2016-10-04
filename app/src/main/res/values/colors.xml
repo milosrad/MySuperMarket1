@@ -14,4 +14,6 @@
     <color name="transparent_error">#35000000</color>
     <color name="cancel_color">#00effc</color>
     <color name="reddish_pink">#ff3366</color>
+    <color name="menuopacity">#1Affffff</color>
+    <color name="switchyellow">#80feea00</color>
 </resources>

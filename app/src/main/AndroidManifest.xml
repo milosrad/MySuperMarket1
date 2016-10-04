@@ -34,6 +34,8 @@
         <activity android:name=".ConfirmingAddressActivity"/>
         <activity android:name=".FinalCartActivity"/>
         <activity android:name=".NavigationActivityExp"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SettingsActivity"/>
     </application>
 
 </manifest>
