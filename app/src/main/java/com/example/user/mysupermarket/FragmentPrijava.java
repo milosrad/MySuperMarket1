@@ -207,7 +207,8 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View view) {
                 isSignInSkipped=true;
-                startActivity(new Intent(getActivity().getApplicationContext(),HomeActivity.class));
+             //   startActivity(new Intent(getActivity().getApplicationContext(),HomeActivity.class));
+                startActivity(new Intent(getActivity().getApplicationContext(),IntroActivity.class));
             }
         });
 

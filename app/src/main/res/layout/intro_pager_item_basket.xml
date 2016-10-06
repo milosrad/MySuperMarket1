@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite">
+
+
+    <LinearLayout
+        android:layout_width="173.3dp"
+        android:layout_height="173.3dp"
+        android:id="@+id/intro_pager_item_basket_image_layout"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/whiteshoppingbag"
+        android:background="@drawable/img"
+        android:clickable="true"
+        android:orientation="vertical"
+        >
+        
+        <ImageView
+            android:id="@+id/intro_pager_item_basket_image"
+            android:layout_width="61.3dp"
+            android:layout_height="70.1dp"
+            android:src="@drawable/whiteshoppingbag"
+            android:layout_gravity="center"
+            android:layout_marginTop="51.3dp"/>
+
+    </LinearLayout>
+   
+    
+    <com.example.user.mysupermarket.TextViewFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="73.3dp"
+        android:textSize="20sp"
+        android:text="@string/AddtoBasket"
+        android:textColor="@color/colorDarkLogin"
+        android:textAlignment="center"
+        android:id="@+id/intro_pager_item_basket_addtobasket"
+        />
+
+</LinearLayout>

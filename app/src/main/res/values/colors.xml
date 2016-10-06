@@ -16,4 +16,8 @@
     <color name="reddish_pink">#ff3366</color>
     <color name="menuopacity">#1Affffff</color>
     <color name="switchyellow">#80feea00</color>
+
+    <color name="dotnonselectedcolor">#cc1d1d26</color>
+    <color name="shadow">#80ffffff</color>
+    <color name="shadowintro">#33000000</color>
 </resources>

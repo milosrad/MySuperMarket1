@@ -69,6 +69,8 @@
     <string name="SignOut">Odjavi se</string>
     <string name="Support">Podrska</string>
     <string name="Profile">Profil</string>
+    <string name="AddtoBasket">Dodaj u korpu</string>
+    <string name="Close">Zatvori</string>
 
     <string-array name="menu_options">
 

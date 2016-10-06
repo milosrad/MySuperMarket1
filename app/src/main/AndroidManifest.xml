@@ -36,6 +36,7 @@
         <activity android:name=".NavigationActivityExp"/>
         <activity android:name=".ProfileActivity"/>
         <activity android:name=".SettingsActivity"/>
+        <activity android:name=".IntroActivity"/>
     </application>
 
 </manifest>
