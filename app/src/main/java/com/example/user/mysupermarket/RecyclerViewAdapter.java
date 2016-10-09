@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.user.mysupermarket.data.DataContainer;
+import com.example.user.mysupermarket.data.response.DataHomeProducts;
+
+import java.io.Serializable;
 
 /**
  * Created by User on 18.9.2016.
@@ -106,6 +110,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 intent.putExtra("size",DataContainer.homeProducts.get(position).sizes);
                 intent.putExtra("name",DataContainer.homeProducts.get(position).name);
+                intent.putExtra("product", (Parcelable) DataContainer.homeProducts.get(position));
 
                 mContext.startActivity(intent);
             }

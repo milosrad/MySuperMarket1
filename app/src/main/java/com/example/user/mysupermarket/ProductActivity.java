@@ -3,10 +3,14 @@ package com.example.user.mysupermarket;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.user.mysupermarket.data.DataContainer;
+import com.example.user.mysupermarket.data.response.DataHomeProducts;
+
+import java.io.Serializable;
 
 /**
  * Created by User on 19.9.2016.
@@ -25,6 +29,7 @@ public class ProductActivity extends MessageActivity {
     private LoginButton mAddtoBasketButton;
 
     private int position;
+    DataHomeProducts product;
 
     private static boolean isInWishList;
 
@@ -70,6 +75,8 @@ public class ProductActivity extends MessageActivity {
 
         Bundle extras = getIntent().getExtras();
         Bitmap bmp = (Bitmap) extras.getParcelable("imagebitmap");
+
+        product= (DataHomeProducts)extras.getParcelable("product");
 
       //  String size=getIntent().getStringExtra("sizes");
 
@@ -117,6 +124,8 @@ public class ProductActivity extends MessageActivity {
             @Override
             public void onClick(View view) {
 
+                DataContainer.cartProducts.add(product);
+
                 Intent intent = new Intent(getApplicationContext(),CartActivity.class);
 
                 mProductImage.buildDrawingCache();
@@ -124,6 +133,7 @@ public class ProductActivity extends MessageActivity {
 
                 Bundle extras = new Bundle();
                 extras.putParcelable("imagebitmap", image);
+                extras.putParcelable("product", (Parcelable) product);
                 intent.putExtras(extras);
 
                 startActivity(intent);

@@ -218,7 +218,7 @@ public class StartActivity extends MessageActivity {
             public void onResponse(ResponseHomeProducts response) {
 
                 DataContainer.homeProducts=response.data.results;
-                DataContainer.cartProducts=DataContainer.homeProducts;
+             //   DataContainer.cartProducts=DataContainer.homeProducts;
                 incrementServiceCounter();
 
             }

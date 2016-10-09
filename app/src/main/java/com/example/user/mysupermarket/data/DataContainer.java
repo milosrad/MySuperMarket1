@@ -31,7 +31,7 @@ public class DataContainer {
 
 
 
-    public static ArrayList<DataHomeProducts> cartProducts;
+    public static ArrayList<DataHomeProducts> cartProducts=new ArrayList<>();
 
     public static ArrayList<DataEditProfile> profiledata;
 
