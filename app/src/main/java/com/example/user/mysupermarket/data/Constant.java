@@ -23,5 +23,13 @@ public class Constant {
     public static String CATEGORY_URL = BASE_URL + "phone-categories";
     public static String HOME_PAGE_PRODUCT_URL = BASE_URL + "phone-products";
 
+    public static String EDIT_PROFILE_URL= BASE_URL + "phone-myprofile-changedata";
+
+
+    public static String CHANGE_PASSWORD_URL= BASE_URL + "phone-myprofile-changepassword";
+
+    public static final String URL_FAVOURITES_LIST = BASE_URL + "phone-wishlist";
+    public static final String URL_FAVOURITES_ADD = BASE_URL + "phone-wishlist-add";
+
     //POSTMAN za proveru post metoda
 }

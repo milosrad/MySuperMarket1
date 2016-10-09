@@ -71,6 +71,10 @@
     <string name="Profile">Profil</string>
     <string name="AddtoBasket">Dodaj u korpu</string>
     <string name="Close">Zatvori</string>
+    <string name="Statistics">Statistika</string>
+    <string name="TotalAmount">UKUPAN IZNOS</string>
+    <string name="Shopping">KUPOVINE</string>
+    <string name="Recomendations">PREPORUKE</string>
 
     <string-array name="menu_options">
 

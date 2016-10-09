@@ -26,8 +26,24 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private Context mContext;
     private LayoutInflater mInflater;
 
+    private Activity context;
+
+    private Intent intent;
+
 
     public CartAdapter(Context mContext) {
+
+        this.mContext = mContext;
+
+        this.mInflater=LayoutInflater.from(mContext);
+
+
+    }
+
+    public CartAdapter(Intent intent,Context mContext){
+
+
+        this.intent=intent;
 
         this.mContext = mContext;
 
@@ -137,11 +153,16 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             }
         });
 
-      /*  Intent intent = ((Activity)mContext).getIntent();
+     //   Intent intent = context.getIntent();
+
+     //   Intent intent = ((Activity) mContext).getIntent();
+
+
+
         Bundle extras =intent.getExtras();
         Bitmap bmp = (Bitmap) extras.getParcelable("imagebitmap");
 
-        holder.mProImage.setImageBitmap(bmp); */
+        holder.mProImage.setImageBitmap(bmp);
 
 
     }

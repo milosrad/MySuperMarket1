@@ -2,6 +2,7 @@ package com.example.user.mysupermarket.data;
 
 import com.example.user.mysupermarket.data.response.DataCategory;
 import com.example.user.mysupermarket.data.response.DataCity;
+import com.example.user.mysupermarket.data.response.DataEditProfile;
 import com.example.user.mysupermarket.data.response.DataForgotPassword;
 import com.example.user.mysupermarket.data.response.DataHomeProducts;
 import com.example.user.mysupermarket.data.response.DataLogin;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 public class DataContainer {
 
     public static String TOKEN;
+    public static String LOGIN_TOKEN;
 
     public static ArrayList<DataCategory>categories;
     public static ArrayList<DataCity>cities;
@@ -30,6 +32,10 @@ public class DataContainer {
 
 
     public static ArrayList<DataHomeProducts> cartProducts;
+
+    public static ArrayList<DataEditProfile> profiledata;
+
+    public static ArrayList<DataHomeProducts> wishlistProducts=new ArrayList<>();
 
 
 

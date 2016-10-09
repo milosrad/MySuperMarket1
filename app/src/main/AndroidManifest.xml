@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
 
     <application
         android:allowBackup="true"
@@ -37,6 +38,7 @@
         <activity android:name=".ProfileActivity"/>
         <activity android:name=".SettingsActivity"/>
         <activity android:name=".IntroActivity"/>
+        <activity android:name=".StatisticsActivity"/>
     </application>
 
 </manifest>

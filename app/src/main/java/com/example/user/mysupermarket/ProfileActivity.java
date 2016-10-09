@@ -26,6 +26,7 @@ import com.example.user.mysupermarket.data.Constant;
 import com.example.user.mysupermarket.data.DataContainer;
 import com.example.user.mysupermarket.data.response.DataCategory;
 import com.example.user.mysupermarket.data.response.DataHomeProducts;
+import com.example.user.mysupermarket.data.response.ResponseEditProfile;
 import com.example.user.mysupermarket.data.response.ResponseProductSearch;
 import com.example.user.mysupermarket.networking.DataLoader;
 import com.example.user.mysupermarket.networking.GsonRequest;
@@ -64,6 +65,10 @@ public class ProfileActivity extends MessageActivity {
 
     private GsonRequest<ResponseProductSearch> mResponseProduct2;
     private GsonRequest<ResponseProductSearch>mResponseProduct3;
+
+    private GsonRequest<ResponseEditProfile>mRequestEditProfile;
+
+
     ArrayList<DataHomeProducts> mProductList=new ArrayList<>();
     ArrayList<DataCategory>mCategoryList=new ArrayList<>();
 
@@ -194,6 +199,24 @@ public class ProfileActivity extends MessageActivity {
         mChangeProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                mRequestEditProfile= new GsonRequest<ResponseEditProfile>(Constant.EDIT_PROFILE_URL + "?token=" + DataContainer.TOKEN + "?login_token=" + DataContainer.LOGIN_TOKEN + "?username=" + mUserName.getText().toString() + "?email=" + mEmail.getText().toString() + "?birthday=" + mBirthDate.getText().toString(), Request.Method.GET, ResponseEditProfile.class, new Response.Listener<ResponseEditProfile>() {
+                    @Override
+                    public void onResponse(ResponseEditProfile response) {
+
+                        DataContainer.profiledata=response.data.results;
+
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        Toast.makeText(getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+
+                    }
+                });
+
+                DataLoader.addRequest(getApplicationContext(),mRequestEditProfile,REQUEST_TAG);
 
             }
         });

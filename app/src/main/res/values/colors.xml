@@ -20,4 +20,11 @@
     <color name="dotnonselectedcolor">#cc1d1d26</color>
     <color name="shadow">#80ffffff</color>
     <color name="shadowintro">#33000000</color>
+
+    <color name="favorite_product_shadow">#99feea00</color>
+
+
+    <color name="statistics_total_amount">#50d2c2</color>
+    <color name="statistics_shopping_number">#fcab53</color>
+    <color name="statistics_recomendations_number">#ff3366</color>
 </resources>

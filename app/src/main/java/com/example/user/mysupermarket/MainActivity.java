@@ -195,7 +195,16 @@ public class MainActivity extends MessageActivity {
 
                 if (i == 0) {
                     mDraverLayout.closeDrawer(GravityCompat.START);
-                } else if (i == mCategoryList.size() - 2) {
+                }
+
+                else if (i== mCategoryList.size()-1){
+
+                    startActivity(new Intent(getApplicationContext(),StatisticsActivity.class));
+
+
+                }
+
+                else if (i == mCategoryList.size() - 2) {
 
                     startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                 } else if (i == mCategoryList.size() - 3) {

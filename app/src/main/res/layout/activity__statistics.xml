@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:id="@+id/statisticsicons"
+        android:layout_width="500dp"
+        android:layout_height="85.3dp"
+        android:visibility="visible"
+        android:background="@color/menuopacity"
+        >
+
+        <ImageView
+            android:id="@+id/statisticsiconback"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="16.7dp"
+            android:layout_marginTop="38.7dp"
+            android:layout_marginBottom="13.3dp"
+            android:src="@drawable/back"
+            android:visibility="visible"
+            />
+
+        <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/statisticslogo"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26.7dp"
+            android:src="@drawable/logo_white"
+            android:layout_marginTop="40dp"
+            android:text="@string/Statistics"
+            android:textColor="@color/colorwhite"
+            android:textSize="22.7sp"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/statisticsprofileimage"
+        android:layout_width="133.2dp"
+        android:layout_height="133.3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="87.3dp"/>
+
+    <GridLayout
+        android:id="@+id/statisticslayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="26.7dp"
+        android:layout_marginRight="26.7dp"
+        android:layout_marginTop="36.7dp"
+        android:background="@drawable/bg">
+
+
+        <LinearLayout
+            android:id="@+id/statisticstotalamount"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_row="0"
+            android:layout_column="10"
+            android:background="@color/underlineopacity">
+
+            <com.example.user.mysupermarket.TextViewFont
+            android:id="@+id/textViewpriceamount"
+            android:layout_width="228dp"
+            android:layout_height="53.dp"
+            android:layout_marginTop="3.4dp"
+            android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:id="@+id/statisticstotalamounticon"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent"
+                android:layout_marginTop="33.3dp"
+                android:background="@color/statistics_total_amount">
+
+
+                <com.example.user.mysupermarket.TextViewFont
+                    android:id="@+id/totalamount"
+                    android:layout_width="122.7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26.7dp"
+                    android:layout_marginTop="15.3dp"/>
+
+
+                <ImageView
+                    android:id="@+id/statisticsiconcheck"
+                    android:layout_width="33.3dp"
+                    android:layout_height="33.3dp"
+                    android:src="@drawable/statistics_check"
+                    android:tint="@color/colorwhite"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="20.1dp"
+                    android:layout_marginTop="8.6dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="172dp"
+            android:layout_height="119dp"
+            android:layout_row="3"
+            android:layout_column="10"
+            android:weightSum="1">
+
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/textViewshoppingnumber"
+                android:layout_width="57.3dp"
+                android:layout_height="53.dp"
+                android:layout_marginTop="3.4dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:id="@+id/statisticsshoppingicon"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="80dp"
+                android:background="@color/statistics_shopping_number"
+                android:layout_weight="0.41">
+
+
+                <com.example.user.mysupermarket.TextViewFont
+                    android:id="@+id/shoppingnumber"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26.7dp"
+                    android:layout_marginTop="15.3dp"/>
+
+
+                <ImageView
+                    android:id="@+id/statisticsiconshoping"
+                    android:layout_width="33.3dp"
+                    android:layout_height="33.3dp"
+                    android:src="@drawable/statistics_shopping_icon"
+                    android:tint="@color/colorwhite"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="20.1dp"
+                    android:layout_marginTop="8.6dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </GridLayout>
+
+</LinearLayout>

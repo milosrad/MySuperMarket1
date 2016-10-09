@@ -20,8 +20,13 @@ public class ProductActivity extends MessageActivity {
 
     private ImageView mIconBack;
     private ImageView mProductImage;
+    private ImageView mProductAddToFavoritesImage;
 
     private LoginButton mAddtoBasketButton;
+
+    private int position;
+
+    private static boolean isInWishList;
 
 
     @Override
@@ -40,6 +45,7 @@ public class ProductActivity extends MessageActivity {
 
         mIconBack=(ImageView)findViewById(R.id.producticonback);
         mProductImage=(ImageView)findViewById(R.id.productlargeimage);
+        mProductAddToFavoritesImage=(ImageView)findViewById(R.id.productaddtofavoritesicon);
 
 
         mProductType=(TextViewFont)findViewById(R.id.producttype);
@@ -71,11 +77,26 @@ public class ProductActivity extends MessageActivity {
 
         String name=extras.getString("name");
 
+        position= extras.getInt("position");
+
         mProductSize.setText("Velicina: "+size);
 
         mProductType.setText(name);
 
         mProductImage.setImageBitmap(bmp );
+
+        if(isInWishList==true){
+
+            mProductAddToFavoritesImage.setColorFilter(getResources().getColor(R.color.colorYellowLogin));
+
+
+
+        }
+
+        else {
+            isInWishList = false;
+            mProductAddToFavoritesImage.setColorFilter(getResources().getColor(R.color.colorwhite));
+        }
 
 
     }
@@ -106,6 +127,44 @@ public class ProductActivity extends MessageActivity {
                 intent.putExtras(extras);
 
                 startActivity(intent);
+            }
+        });
+
+        mProductAddToFavoritesImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (isInWishList==true){
+
+
+                    mProductAddToFavoritesImage.setColorFilter(getResources().getColor(R.color.favorite_product_shadow));
+
+                    DataContainer.wishlistProducts.remove(DataContainer.homeProducts.get(position));
+
+                    isInWishList=false;
+
+                }
+
+
+                else{
+
+                    mProductAddToFavoritesImage.setColorFilter(getResources().getColor(R.color.colorYellowLogin));
+
+                    DataContainer.wishlistProducts.add(DataContainer.homeProducts.get(position));
+
+                    isInWishList= true;
+
+                }
+
+              /*  mProductAddToFavoritesImage.setColorFilter(getResources().getColor(R.color.colorYellowLogin));
+
+
+                DataContainer.wishlistProducts.add(DataContainer.homeProducts.get(position));
+
+
+                isInWishList= true; */
+
+
             }
         });
     }
