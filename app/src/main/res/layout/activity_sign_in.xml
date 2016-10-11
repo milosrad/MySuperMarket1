@@ -24,12 +24,14 @@
         android:id="@+id/sign_in_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
+        android:textColor="@color/colorwhite"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="25dp"
-        android:hint="@string/Korisnickoime"
+        android:hint="@string/EmailAdresa"
+
         android:paddingLeft="39dp"
         android:paddingBottom="16dp"
+            android:textCursorDrawable="@null"
         />
     
 
@@ -64,6 +66,7 @@
             android:paddingLeft="39dp"
             android:paddingBottom="16dp"
             android:inputType="textPassword"
+            android:textCursorDrawable="@null"
             />
 
 
@@ -98,7 +101,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:theme="@style/SCBSwitch"/>
 
         <com.example.user.mysupermarket.LoginButton
             android:id="@+id/skipbutton"
@@ -129,7 +133,7 @@
         android:id="@+id/forgottenpasswordbutton"
         android:layout_width="200dp"
         android:layout_height="23dp"
-        android:background="@drawable/bg"
+        android:background="@color/favorite_product_shadow"
         android:hint="@string/ZaboravljenaLozinka"
         android:textColor="@color/colorwhite"
         android:layout_marginTop="15dp"

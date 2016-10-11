@@ -178,12 +178,16 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
     public void initComponents(){
 
         mUserName = (EditTextFont) view.findViewById(R.id.sign_in_username);
-        mUserName.setHint(getResources().getString(R.string.Korisnickoime));
+        mUserName.setHint(getResources().getString(R.string.EmailAdresa));
+        mUserName.setHint(getResources().getString(R.string.EMail));
+
         mUserName.setHintTextColor(getResources().getColor(R.color.colorwhite));
 
         mPassword = (EditTextFont) view.findViewById(R.id.sign_in_password);
         mPassword.setHint(getResources().getString(R.string.Lozinka));
         mPassword.setHintTextColor(getResources().getColor(R.color.colorwhite));
+
+        mPassword.setTypeface(mUserName.getTypeface());
 
         mSignInButton=(LoginButton)view.findViewById(R.id.sign_in_button);
 
@@ -217,7 +221,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if(b) {
-                    mUserName.setHint(getResources().getString(R.string.Korisnickoime));
+                    mUserName.setHint(getResources().getString(R.string.EmailAdresa));
                 }
                 else{
 
@@ -349,7 +353,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
 
              //   DataLoader.addRequest(getActivity().getApplicationContext(),mRequestLogin,REQUEST_TAG);
 
-                startActivity(new Intent(getActivity().getApplicationContext(),HomeActivity.class));
+            //    startActivity(new Intent(getActivity().getApplicationContext(),HomeActivity.class));
 
             }
         });

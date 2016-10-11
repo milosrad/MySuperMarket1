@@ -76,6 +76,7 @@
     <string name="Shopping">KUPOVINE</string>
     <string name="Recomendations">PREPORUKE</string>
     <string name="FavouriteProducts">Vasi Omiljeni proizvodi</string>
+    <string name="EmailAdresa">E-mail adresa</string>
 
     <string-array name="menu_options">
 

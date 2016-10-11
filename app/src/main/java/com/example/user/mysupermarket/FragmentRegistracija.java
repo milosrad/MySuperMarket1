@@ -292,7 +292,22 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         mRadioButtonFemale.setTextColor((getResources().getColor(R.color.colorwhite)));
         mRadioButtonMale.setTextColor((getResources().getColor(R.color.colorwhite)));
 
+        mRadioButtonFemale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mRadioButtonMale.setEnabled(false);
+            }
+        });
+
+        mRadioButtonMale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mRadioButtonFemale.setEnabled(false);
+            }
+        });
+
         mTermsOfUseButton=(LoginButton)view.findViewById(R.id.termsofusebutton);
+
 
         mTermsOfUseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -323,7 +338,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         mSignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity().getApplicationContext(),"SIGN IN",Toast.LENGTH_LONG).show();
+             //   Toast.makeText(getActivity().getApplicationContext(),"SIGN IN",Toast.LENGTH_LONG).show();
 
              //   DataLoader.addRequest(getActivity().getApplicationContext(), mRequestSignUp, REQUEST_TAG);
 
