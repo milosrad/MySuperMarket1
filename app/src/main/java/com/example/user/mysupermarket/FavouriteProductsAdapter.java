@@ -1,27 +1,22 @@
 package com.example.user.mysupermarket;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.database.CharArrayBuffer;
 import android.graphics.Bitmap;
-import android.icu.math.BigDecimal;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.example.user.mysupermarket.data.DataContainer;
 
 /**
- * Created by User on 19.9.2016.
+ * Created by User on 11.10.2016.
  */
-public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
+public class FavouriteProductsAdapter extends RecyclerView.Adapter<FavouriteProductsAdapter.ViewHolder> {
 
     private Context mContext;
     private LayoutInflater mInflater;
@@ -33,7 +28,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private static double totalPrice=0;
 
 
-    public CartAdapter(Context mContext) {
+    public FavouriteProductsAdapter(Context mContext) {
 
         this.mContext = mContext;
 
@@ -42,7 +37,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     }
 
-    public CartAdapter(Intent intent,Context mContext){
+    public FavouriteProductsAdapter(Intent intent,Context mContext){
 
 
         this.intent=intent;
@@ -53,7 +48,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     }
 
     @Override
-    public CartAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public FavouriteProductsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.cart_recycler_view_items,parent,false);
 
         ViewHolder viewHolder = new ViewHolder(view);
@@ -62,7 +57,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(final CartAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(final FavouriteProductsAdapter.ViewHolder holder, int position) {
 
         holder.mPrice.setText("Cena:$35.4");
         holder.mAmount.setText("Kolicina:1");
@@ -86,7 +81,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
                 holder.mAmount.setText("Kolicina:" + number);
 
-               double price= Double.parseDouble((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length()));
+                double price= Double.parseDouble((String) holder.mPrice.getText().subSequence(6,holder.mAmount.getText().length()));
 
                 double newprice=price+onepieceprice;
 
@@ -117,7 +112,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
                 int number=Integer.parseInt((String) holder.mAmount.getText().subSequence(9,holder.mAmount.getText().length()));
                 if(number>1) {
-                     number--;
+                    number--;
 
                     holder.mAmount.setText("Kolicina:" + number);
 
@@ -155,9 +150,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             }
         });
 
-     //   Intent intent = context.getIntent();
+        //   Intent intent = context.getIntent();
 
-     //   Intent intent = ((Activity) mContext).getIntent();
+        //   Intent intent = ((Activity) mContext).getIntent();
 
 
 
@@ -181,7 +176,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return DataContainer.cartProducts.size();
+        return DataContainer.wishlistProducts.size();
     }
 
 
@@ -212,6 +207,4 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
         public static ImageView getmProImage(){return mProImage;}
     }
-
-
 }

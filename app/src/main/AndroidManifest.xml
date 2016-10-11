@@ -39,6 +39,8 @@
         <activity android:name=".SettingsActivity"/>
         <activity android:name=".IntroActivity"/>
         <activity android:name=".StatisticsActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".FavouriteProductsActivity"/>
     </application>
 
 </manifest>

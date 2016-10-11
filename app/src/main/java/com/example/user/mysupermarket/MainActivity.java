@@ -37,6 +37,7 @@ public class MainActivity extends MessageActivity {
     private DrawerLayout mDraverLayout;
     private ImageView mIvMenu;
     private ImageView mIvBasket;
+    private ImageView mIvSearch;
     private RelativeLayout mPbLoading;
 
 
@@ -63,7 +64,7 @@ public class MainActivity extends MessageActivity {
         setContentView(R.layout.activity_main);
 
         initComponents();
-        addListners();
+        addListeners();
 
     }
 
@@ -74,6 +75,7 @@ public class MainActivity extends MessageActivity {
         mDraverLayout=(DrawerLayout)findViewById(R.id.my_drawer_layout);
         mIvMenu=(ImageView)findViewById(R.id.imageViewHam);
         mIvBasket=(ImageView)findViewById(R.id.imageViewBasket);
+        mIvSearch=(ImageView)findViewById(R.id.mainhomeiconsearch);
         mImageViewUSerDrawer=(ImageView)findViewById(R.id.imageViewUserPicture);
         mTextViewEmailDrawer=(TextViewFont) findViewById(R.id.userEmail);
         mTextViewEmailDrawer.setText("milos.radonjic@yahoo.com");
@@ -136,7 +138,7 @@ public class MainActivity extends MessageActivity {
 
     }
 
-    public void addListners(){
+    public void addListeners(){
         mIvMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -243,6 +245,13 @@ public class MainActivity extends MessageActivity {
 
 
                 return false;
+            }
+        });
+
+        mIvSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),SearchActivity.class));
             }
         });
 

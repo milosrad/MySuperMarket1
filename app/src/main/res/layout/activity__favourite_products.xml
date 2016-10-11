@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg">
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/favourite_icons"
+            android:layout_width="match_parent"
+            android:layout_height="85.3dp"
+            android:visibility="visible"
+
+            >
+
+            <ImageView
+                android:id="@+id/favoritesiconback"
+                android:layout_width="33.3dp"
+                android:layout_height="33.3dp"
+                android:layout_marginLeft="16.7dp"
+                android:layout_marginTop="38.7dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/back"
+                android:visibility="visible"
+                />
+
+            <com.example.user.mysupermarket.TextViewFont
+                android:id="@+id/favouriteslogo"
+                android:layout_width="242.7dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26.7dp"
+                android:text="@string/FavouriteProducts"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/colorwhite"
+                android:textSize="22.7sp"
+                android:padding="0.3sp"/>
+
+            <ImageView
+                android:id="@+id/productaddtofavoritesicon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5.7dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/favorites"
+                android:tint="@color/colorYellowLogin"
+                />
+
+        </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        </android.support.v7.widget.RecyclerView>
+    </ScrollView>
+
+</LinearLayout>

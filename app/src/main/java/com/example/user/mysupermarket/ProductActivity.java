@@ -149,20 +149,44 @@ public class ProductActivity extends MessageActivity {
 
                     mProductAddToFavoritesImage.setColorFilter(getResources().getColor(R.color.favorite_product_shadow));
 
-                    DataContainer.wishlistProducts.remove(DataContainer.homeProducts.get(position));
+          //          DataContainer.wishlistProducts.remove(DataContainer.homeProducts.get(position));
 
                     isInWishList=false;
+
+                    DataContainer.wishlistProducts.remove(product);
+
+                   /* Intent intent = new Intent(getApplicationContext(),FavouriteProductsActivity.class);
+
+
+
+                    startActivity(intent);  */
 
                 }
 
 
                 else{
 
+
+
                     mProductAddToFavoritesImage.setColorFilter(getResources().getColor(R.color.colorYellowLogin));
 
-                    DataContainer.wishlistProducts.add(DataContainer.homeProducts.get(position));
+                //    DataContainer.wishlistProducts.add(DataContainer.homeProducts.get(position));
 
                     isInWishList= true;
+
+                    DataContainer.wishlistProducts.add(product);
+
+                    Intent intent = new Intent(getApplicationContext(),FavouriteProductsActivity.class);
+
+                    mProductImage.buildDrawingCache();
+                    Bitmap image= mProductImage.getDrawingCache();
+
+                    Bundle extras = new Bundle();
+                    extras.putParcelable("imagebitmap", image);
+                    extras.putParcelable("product", (Parcelable) product);
+                    intent.putExtras(extras);
+
+                    startActivity(intent);
 
                 }
 
