@@ -25,6 +25,8 @@ import com.example.user.mysupermarket.data.response.ResponseForgotPassword;
 import com.example.user.mysupermarket.data.response.ResponseLogin;
 import com.example.user.mysupermarket.networking.DataLoader;
 import com.example.user.mysupermarket.networking.GsonRequest;
+import com.example.user.mysupermarket.tools.BusProvider;
+import com.example.user.mysupermarket.tools.MessageObject;
 
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -61,6 +63,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
     private final String REQUEST_TAG="Fragment Prijava";
 
     public static boolean isSignInSkipped=false;
+    public static boolean isFirstTimeEntry=false;
 
 
 
@@ -163,6 +166,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
     public void onResume() {
         super.onResume();
         isSignInSkipped=false;
+        isFirstTimeEntry=true;
     }
 
 
@@ -211,8 +215,18 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View view) {
                 isSignInSkipped=true;
+
+                if (isFirstTimeEntry=true){
+
+                    startActivity(new Intent(getActivity().getApplicationContext(),IntroActivity.class));
+                    isFirstTimeEntry=false;
+                }
+                else {
+
+                    startActivity(new Intent(getActivity().getApplicationContext(),MainActivity.class));
+                }
              //   startActivity(new Intent(getActivity().getApplicationContext(),HomeActivity.class));
-                startActivity(new Intent(getActivity().getApplicationContext(),IntroActivity.class));
+             //   startActivity(new Intent(getActivity().getApplicationContext(),IntroActivity.class));
             }
         });
 
@@ -271,6 +285,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
 
                                 DataContainer.forgottenPasswordEmail = response.data.results;
                                 Toast.makeText(getContext(), "Error" + response.data.error, Toast.LENGTH_SHORT).show();
+                                BusProvider.getInstance().post(new MessageObject());
 
                             }
                         }, new Response.ErrorListener() {
@@ -300,6 +315,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
                 if (mUserName.getText().toString().equalsIgnoreCase("") || mPassword.getText().toString().equalsIgnoreCase("")){
 
                     Toast.makeText(getContext(),R.string.Popunitepolja,Toast.LENGTH_SHORT).show();
+                    BusProvider.getInstance().post(new MessageObject());
                 }
 
                 else {
@@ -313,6 +329,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
                             if (response.data.error!=""){
 
                                 Toast.makeText(getContext(), R.string.LoginIncorrect, Toast.LENGTH_SHORT).show();
+                                BusProvider.getInstance().post(new MessageObject());
 
                             }
 
@@ -342,7 +359,7 @@ public class FragmentPrijava extends android.support.v4.app.Fragment {
                         public void onErrorResponse(VolleyError error) {
 
                             Toast.makeText(getActivity().getApplicationContext(),error.getLocalizedMessage(),Toast.LENGTH_LONG).show();
-
+                            BusProvider.getInstance().post(new MessageObject());
                         }
                     });
 

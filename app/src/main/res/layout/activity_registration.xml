@@ -38,6 +38,8 @@
             android:paddingLeft="39dp"
             android:paddingBottom="16dp"
             android:textCursorDrawable="@null"
+            android:background="@android:color/transparent"
+            android:inputType="textPersonName"
 
 
             />
@@ -73,6 +75,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName"
 
                 />
 
@@ -106,6 +110,8 @@
             android:paddingLeft="39dp"
             android:paddingBottom="16dp"
             android:textCursorDrawable="@null"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
 
             />
 
@@ -142,6 +148,8 @@
             android:paddingLeft="39dp"
             android:paddingBottom="16dp"
             android:textCursorDrawable="@null"
+            android:background="@android:color/transparent"
+            android:inputType="textVisiblePassword"
             />
 
 
@@ -177,6 +185,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="textVisiblePassword"
                 />
 
 
@@ -212,6 +222,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="phone"
                 />
 
 
@@ -247,6 +259,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="phone"
                 />
 
 
@@ -282,6 +296,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="phone"
                 />
 
         </LinearLayout>
@@ -313,6 +329,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="text"
                 />
 
         </LinearLayout>
@@ -344,6 +362,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="number"
                 />
 
         </LinearLayout>
@@ -375,6 +395,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="numberDecimal"
                 />
 
         </LinearLayout>
@@ -406,6 +428,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="numberDecimal"
                 />
 
         </LinearLayout>
@@ -437,6 +461,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="numberDecimal"
                 />
 
         </LinearLayout>
@@ -466,6 +492,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="45dp"
             android:layout_marginLeft="10dp"
+            android:padding="5dp"
             >
 
 
@@ -502,6 +529,8 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="number"
                 />
 
         </LinearLayout>
@@ -529,6 +558,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:layout_marginLeft="100dp"
+            android:theme="@style/SCBSwitch"
 
             />
 
@@ -558,6 +588,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginLeft="10dp"
+                android:padding="5dp"
                 >
 
 
@@ -592,6 +623,7 @@
                     android:layout_height="30dp"
                     android:layout_marginTop="45dp"
                     android:layout_marginLeft="10dp"
+                    android:padding="5dp"
                     >
 
 
@@ -624,6 +656,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="45dp"
             android:layout_marginLeft="10dp"
+            android:padding="5dp"
             >
 
 
@@ -754,6 +787,7 @@
                 android:paddingLeft="39dp"
                 android:paddingBottom="16dp"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
                 />
 
             <com.example.user.mysupermarket.EditTextFont
@@ -764,6 +798,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_gravity="right"
                 android:textCursorDrawable="@null"
+                android:background="@android:color/transparent"
+                android:inputType="number"
                 >
 
 

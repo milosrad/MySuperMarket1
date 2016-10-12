@@ -192,6 +192,15 @@ public class LoginActivity extends MessageActivity implements TabLayout.OnTabSel
         mIconBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int position= mViewPager.getCurrentItem();
+
+                if (position==1){
+                    mViewPager.setCurrentItem(0,true);
+                }
+
+                else
+
                 finish();
             }
         });

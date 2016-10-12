@@ -30,6 +30,8 @@ import com.example.user.mysupermarket.data.DataContainer;
 import com.example.user.mysupermarket.data.response.ResponseSignUp;
 import com.example.user.mysupermarket.networking.DataLoader;
 import com.example.user.mysupermarket.networking.GsonRequest;
+import com.example.user.mysupermarket.tools.BusProvider;
+import com.example.user.mysupermarket.tools.MessageObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -166,12 +168,12 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
         mRegistrationPhone = (EditTextFont) view.findViewById(R.id.registration_phone);
 
-        mRegistrationPhone.setHint(getResources().getString(R.string.Unesitebrojmobilnogtelefona));
+        mRegistrationPhone.setHint(getResources().getString(R.string.Unesitebrojfiksnogtelefona));
         mRegistrationPhone.setHintTextColor(getResources().getColor(R.color.colorwhite));
 
         mRegistrationFax = (EditTextFont) view.findViewById(R.id.registration_fax);
 
-        mRegistrationFax.setHint(getResources().getString(R.string.Unesitebrojmobilnogtelefona));
+        mRegistrationFax.setHint(getResources().getString(R.string.Unesitebrojfaksa));
         mRegistrationFax.setHintTextColor(getResources().getColor(R.color.colorwhite));
 
         mRegistrationStreet = (EditTextFont) view.findViewById(R.id.registration_street);
@@ -389,6 +391,34 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         cityList.add("Beograd");
         cityList.add("Novi Sad");
         cityList.add("Nis");
+        cityList.add("Subotica");
+        cityList.add("Kragujevac");
+        cityList.add("Sabac");
+        cityList.add("Kraljevo");
+        cityList.add("Zrenjanin");
+        cityList.add("Cacak");
+        cityList.add("Uzice");
+        cityList.add("Vranje");
+        cityList.add("Leskovac");
+        cityList.add("Bor");
+        cityList.add("Zajecar");
+        cityList.add("Loznica");
+        cityList.add("Valjevo");
+        cityList.add("Prokuplje");
+        cityList.add("Kursumlija");
+        cityList.add("Paracin");
+        cityList.add("Jagodina");
+        cityList.add("Sremska Mitrovica");
+        cityList.add("Pirot");
+        cityList.add("Vrsac");
+        cityList.add("Kikinda");
+        cityList.add("Apatin");
+        cityList.add("Backa Palanka");
+        cityList.add("Pozega");
+        cityList.add("Ivanjica");
+        cityList.add("Novi pazar");
+        cityList.add("Prijepolje");
+        cityList.add("Tutin");
 
 
         mSpinnerCity=(Spinner) view.findViewById(R.id.spinnercity);
@@ -403,7 +433,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
         dateList=new ArrayList<>();
 
-        dateList.add("Izaberite dan");
+        dateList.add("Dan");
 
         dateList.add("1");
         dateList.add("2");
@@ -420,7 +450,22 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         dateList.add("13");
         dateList.add("14");
         dateList.add("15");
+        dateList.add("17");
         dateList.add("16");
+        dateList.add("18");
+        dateList.add("19");
+        dateList.add("20");
+        dateList.add("21");
+        dateList.add("22");
+        dateList.add("23");
+        dateList.add("24");
+        dateList.add("25");
+        dateList.add("26");
+        dateList.add("27");
+        dateList.add("28");
+        dateList.add("29");
+        dateList.add("30");
+        dateList.add("31");
 
 
         mSpinnerDate=(Spinner) view.findViewById(R.id.spinnerday);
@@ -435,7 +480,7 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
         monthList=new ArrayList<>();
 
-        monthList.add("Izaberite mesec");
+        monthList.add("Mesec");
 
         monthList.add("1");
         monthList.add("2");
@@ -465,7 +510,102 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
 
         yearList=new ArrayList<>();
 
-        yearList.add("Izaberite godinu");
+        yearList.add("Godina");
+
+        yearList.add("1900");
+        yearList.add("1901");
+        yearList.add("1902");
+        yearList.add("1903");
+        yearList.add("1904");
+        yearList.add("1905");
+        yearList.add("1906");
+        yearList.add("1907");
+        yearList.add("1908");
+        yearList.add("1909");
+        yearList.add("1910");
+
+        yearList.add("1911");
+        yearList.add("1912");
+        yearList.add("1913");
+        yearList.add("1914");
+        yearList.add("1915");
+        yearList.add("1916");
+        yearList.add("1917");
+        yearList.add("1918");
+        yearList.add("1919");
+        yearList.add("1920");
+        yearList.add("1921");
+        yearList.add("1922");
+
+
+        yearList.add("1923");
+        yearList.add("1924");
+        yearList.add("1925");
+        yearList.add("1926");
+        yearList.add("1927");
+        yearList.add("1928");
+        yearList.add("1929");
+        yearList.add("1930");
+        yearList.add("1931");
+        yearList.add("1932");
+        yearList.add("1933");
+        yearList.add("1934");
+
+
+        yearList.add("1935");
+        yearList.add("1936");
+        yearList.add("1937");
+        yearList.add("1938");
+        yearList.add("1939");
+        yearList.add("1940");
+        yearList.add("1941");
+        yearList.add("1942");
+        yearList.add("1943");
+        yearList.add("1944");
+        yearList.add("1945");
+        yearList.add("1946");
+
+
+        yearList.add("1947");
+        yearList.add("1948");
+        yearList.add("1949");
+        yearList.add("1950");
+        yearList.add("1951");
+        yearList.add("1952");
+        yearList.add("1953");
+        yearList.add("1954");
+        yearList.add("1955");
+        yearList.add("1956");
+        yearList.add("1957");
+        yearList.add("1958");
+
+
+        yearList.add("1959");
+        yearList.add("1960");
+        yearList.add("1961");
+        yearList.add("1962");
+        yearList.add("1963");
+        yearList.add("1964");
+        yearList.add("1965");
+        yearList.add("1966");
+        yearList.add("1967");
+        yearList.add("1968");
+        yearList.add("1969");
+        yearList.add("1970");
+
+
+        yearList.add("1971");
+        yearList.add("1972");
+        yearList.add("1973");
+        yearList.add("1974");
+        yearList.add("1975");
+        yearList.add("1976");
+        yearList.add("1977");
+        yearList.add("1978");
+        yearList.add("1979");
+        yearList.add("1980");
+        yearList.add("1981");
+        yearList.add("1982");
 
         yearList.add("1983");
         yearList.add("1984");
@@ -579,19 +719,24 @@ public class FragmentRegistracija extends android.support.v4.app.Fragment {
         if (mSpinnerDate.getSelectedItem().toString().equalsIgnoreCase("31") && (mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("02") || mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("04") ||
                 mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("06") || mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("09") || mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("11"))) {
             Toast.makeText(getActivity(), R.string.InvalidDate, Toast.LENGTH_SHORT).show();
+            BusProvider.getInstance().post(new MessageObject());
         } else if (mSpinnerDate.getSelectedItem().toString().equalsIgnoreCase("30") && mSpinnerMonth.getSelectedItem().toString().equalsIgnoreCase("02")) {
             Toast.makeText(getActivity(), R.string.InvalidDate, Toast.LENGTH_SHORT).show();
+            BusProvider.getInstance().post(new MessageObject());
         } else if (mRegistrationName.getText().toString().equalsIgnoreCase(" ") || mRegistrationSurname.getText().toString().equalsIgnoreCase("") || mRegistrationCellNum.getText().toString().equalsIgnoreCase("")
                 || mRegistrationPhone.getText().toString().equalsIgnoreCase("") || mRegistrationFax.getText().toString().equalsIgnoreCase("") || mRegistrationStreet.getText().toString().equalsIgnoreCase("") ||
                 mRegistrationStreetNum.getText().toString().equalsIgnoreCase("") || mRegistrationAptNum.getText().toString().equalsIgnoreCase("") || mRegistrationFloorNum.getText().toString().equalsIgnoreCase("") || mRegistrationEntranceNum.getText().toString().equalsIgnoreCase("") ||
                 mSpinnerCity.getSelectedItem().toString().equalsIgnoreCase("Izaberite grad:") || mRegistrationPassword.getText().toString().equalsIgnoreCase("") || mRegistrationPasswordRetype.getText().toString().equalsIgnoreCase("")) {
             Toast.makeText(getActivity(), R.string.Missingfields, Toast.LENGTH_SHORT).show();
+            BusProvider.getInstance().post(new MessageObject());
         } else if (!mRegistrationEmail.getText().toString().trim().matches("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")) {
             mRegistrationEmail.setError("Invalid Email Address");
         } else if (mRegistrationPhone.getText().toString().length() < 5 || mRegistrationCellNum.getText().toString().length() < 5) {
             Toast.makeText(getActivity(), R.string.BadPhonelength, Toast.LENGTH_SHORT).show();
+            BusProvider.getInstance().post(new MessageObject());
         } else if (!mRadioButtonMale.isChecked() && !mRadioButtonFemale.isChecked()) {
             Toast.makeText(getActivity(), R.string.Radiogroupcheck, Toast.LENGTH_SHORT).show();
+            BusProvider.getInstance().post(new MessageObject());
         }
     }
 

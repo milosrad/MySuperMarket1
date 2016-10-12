@@ -32,6 +32,8 @@
         android:paddingLeft="39dp"
         android:paddingBottom="16dp"
             android:textCursorDrawable="@null"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
         />
     
 
@@ -67,6 +69,7 @@
             android:paddingBottom="16dp"
             android:inputType="textPassword"
             android:textCursorDrawable="@null"
+            android:background="@android:color/transparent"
             />
 
 
@@ -121,7 +124,7 @@
     <com.example.user.mysupermarket.LoginButton
         android:id="@+id/sign_in_button"
         android:layout_width="335dp"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:background="@color/colorYellowLogin"
@@ -136,7 +139,7 @@
         android:background="@color/favorite_product_shadow"
         android:hint="@string/ZaboravljenaLozinka"
         android:textColor="@color/colorwhite"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="92.5dp"
         android:layout_marginBottom="25dp"
 
