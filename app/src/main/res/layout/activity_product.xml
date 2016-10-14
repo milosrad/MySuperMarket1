@@ -65,7 +65,7 @@
 
 
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/producttype"
             android:layout_width="188.7dp"
             android:layout_height="18.7dp"
@@ -84,7 +84,7 @@
 
 
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/productsize"
             android:layout_width="188.7dp"
             android:layout_height="18.7dp"
@@ -102,7 +102,7 @@
             android:layout_marginRight="26.7dp"/>
 
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/productcolor"
             android:layout_width="108.7dp"
             android:layout_height="18.7dp"
@@ -120,7 +120,7 @@
             android:layout_marginRight="26.7dp"/>
 
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/productmaterial"
             android:layout_width="108.7dp"
             android:layout_height="18.7dp"
@@ -139,7 +139,7 @@
 
 
 
-        <com.example.user.mysupermarket.LoginButton
+        <com.example.user.mysupermarket.custom_component.LoginButton
             android:id="@+id/productaddtobasket"
             android:layout_width="match_parent"
             android:layout_height="73.3dp"

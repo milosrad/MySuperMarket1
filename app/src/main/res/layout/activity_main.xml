@@ -138,22 +138,22 @@
 
                     />
 
-                <com.example.user.mysupermarket.TextViewFont
+                <com.example.user.mysupermarket.custom_component.TextViewFont
                     android:id="@+id/textViewUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imageViewUserPicture"
-                    android:text="user"
+
                     android:textSize="27sp"
                     android:layout_marginLeft="15dp"
                     />
 
-                <com.example.user.mysupermarket.TextViewFont
+                <com.example.user.mysupermarket.custom_component.TextViewFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/userEmail"
                     android:layout_below="@id/textViewUserName"
-                    android:text="email"
+
                     android:layout_alignStart="@+id/textViewUserName"
                     android:textSize="18sp"
 

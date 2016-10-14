@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     >
 
-    <com.example.user.mysupermarket.TextViewFont
+    <com.example.user.mysupermarket.custom_component.TextViewFont
         android:layout_marginLeft="70dp"
         android:layout_marginBottom="15dp"
         android:layout_width="wrap_content"

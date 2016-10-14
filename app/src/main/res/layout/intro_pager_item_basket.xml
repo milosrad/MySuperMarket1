@@ -28,7 +28,7 @@
     </LinearLayout>
    
     
-    <com.example.user.mysupermarket.TextViewFont
+    <com.example.user.mysupermarket.custom_component.TextViewFont
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

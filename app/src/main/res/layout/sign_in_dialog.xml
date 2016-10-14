@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg">
 
-    <com.example.user.mysupermarket.EditTextFont
+    <com.example.user.mysupermarket.custom_component.EditTextFont
         android:id="@+id/dialog_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         android:layout_height="40dp"
         android:layout_below="@id/dialog_info">
 
-        <com.example.user.mysupermarket.LoginButton
+        <com.example.user.mysupermarket.custom_component.LoginButton
             android:id="@+id/dialog_cancel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -27,7 +27,7 @@
             android:background="@color/cancel_color"
             android:text="@string/Odustani"/>
 
-        <com.example.user.mysupermarket.LoginButton
+        <com.example.user.mysupermarket.custom_component.LoginButton
             android:id="@+id/dialog_ok"
             android:layout_width="0dp"
             android:layout_height="match_parent"

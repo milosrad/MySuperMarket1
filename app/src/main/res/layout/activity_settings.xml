@@ -41,7 +41,7 @@
                 android:visibility="visible"
                 />
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/settingslogo"
                 android:layout_width="140.7dp"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
 
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/settings_notifications"
                 android:layout_width="105.3dp"
                 android:layout_height="38.7dp"
@@ -123,7 +123,7 @@
 
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/settings_termsofuse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -173,7 +173,7 @@
 
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/settings_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -222,7 +222,7 @@
 
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/settings_sign_out"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -271,7 +271,7 @@
 
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/settings_support"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -347,7 +347,7 @@
 
                     />
 
-                <com.example.user.mysupermarket.TextViewFont
+                <com.example.user.mysupermarket.custom_component.TextViewFont
                     android:id="@+id/textViewUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -357,7 +357,7 @@
                     android:layout_marginLeft="15dp"
                     />
 
-                <com.example.user.mysupermarket.TextViewFont
+                <com.example.user.mysupermarket.custom_component.TextViewFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/userEmail"

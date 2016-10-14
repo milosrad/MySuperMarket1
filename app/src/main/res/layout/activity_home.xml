@@ -112,7 +112,7 @@
 
                     />
 
-                <com.example.user.mysupermarket.TextViewFont
+                <com.example.user.mysupermarket.custom_component.TextViewFont
                     android:id="@+id/textViewUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
                     android:layout_marginLeft="15dp"
                     />
 
-                <com.example.user.mysupermarket.TextViewFont
+                <com.example.user.mysupermarket.custom_component.TextViewFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/userEmail"

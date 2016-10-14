@@ -26,7 +26,7 @@
 
             />
 
-        <com.example.user.mysupermarket.EditTextFont
+        <com.example.user.mysupermarket.custom_component.EditTextFont
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/registration_username"
             android:layout_width="match_parent"
@@ -64,7 +64,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_surname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
 
             />
 
-        <com.example.user.mysupermarket.EditTextFont
+        <com.example.user.mysupermarket.custom_component.EditTextFont
             android:id="@+id/registration_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
 
             />
 
-        <com.example.user.mysupermarket.EditTextFont
+        <com.example.user.mysupermarket.custom_component.EditTextFont
             android:id="@+id/registration_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -174,7 +174,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_passwordretype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -211,7 +211,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -248,7 +248,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -285,7 +285,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_fax"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -318,7 +318,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_street"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -351,7 +351,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_streetnumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -384,7 +384,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_aptnumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -417,7 +417,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_floornumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -450,7 +450,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_entrancenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -473,7 +473,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10.5dp">
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/registration_city"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -518,7 +518,7 @@
 
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/registration_postalcodenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -541,7 +541,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10.5dp">
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/registration_newsleter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -570,7 +570,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="10.5dp">
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/registration_day"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
@@ -605,7 +605,7 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10.5dp">
 
-                <com.example.user.mysupermarket.TextViewFont
+                <com.example.user.mysupermarket.custom_component.TextViewFont
                     android:id="@+id/registration_month"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
@@ -638,7 +638,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10.5dp">
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/registration_year"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -671,7 +671,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="10.5dp">
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/registration_gender"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
@@ -683,7 +683,7 @@
                 android:paddingBottom="16dp"
                 />
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/textviewregistrationgendermale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -707,7 +707,7 @@
 
             </RadioButton>
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/textviewregistrationgenderfemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -740,7 +740,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="30.5dp">
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/textviewregistration_company"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
@@ -776,7 +776,7 @@
             android:layout_marginTop="30.5dp"
             android:visibility="gone">
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/edittextregistration_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -790,7 +790,7 @@
                 android:background="@android:color/transparent"
                 />
 
-            <com.example.user.mysupermarket.EditTextFont
+            <com.example.user.mysupermarket.custom_component.EditTextFont
                 android:id="@+id/edittextregistration_companypib"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
@@ -803,13 +803,13 @@
                 >
 
 
-            </com.example.user.mysupermarket.EditTextFont>
+            </com.example.user.mysupermarket.custom_component.EditTextFont>
 
 
         </LinearLayout>
 
 
-        <com.example.user.mysupermarket.LoginButton
+        <com.example.user.mysupermarket.custom_component.LoginButton
             android:id="@+id/registration_button"
             android:layout_width="335dp"
             android:layout_height="55dp"
@@ -821,7 +821,7 @@
             />
 
 
-        <com.example.user.mysupermarket.LoginButton
+        <com.example.user.mysupermarket.custom_component.LoginButton
             android:id="@+id/termsofusebutton"
             android:layout_width="150dp"
             android:layout_height="23dp"

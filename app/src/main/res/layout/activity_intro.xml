@@ -22,7 +22,7 @@
 
 
 
-    <com.example.user.mysupermarket.LoginButton
+    <com.example.user.mysupermarket.custom_component.LoginButton
         android:id="@+id/closeButton"
         android:layout_width="346.7dp"
         android:layout_height="73.3dp"

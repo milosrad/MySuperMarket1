@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity">
+        <activity android:name=".activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,25 +22,25 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".ForgottenPasswordActivity"/>
-        <activity android:name=".TermsOfUseActivity"/>
-        <activity android:name=".MessageActivity"/>
-        <activity android:name=".HomeActivity"/>
-        <activity android:name=".NavigationActivity"/>
-        <activity android:name=".ProductActivity"/>
-        <activity android:name=".CartActivity"/>
-        <activity android:name=".RegistrationActivity"/>
-        <activity android:name=".ConfirmingAddressActivity"/>
-        <activity android:name=".FinalCartActivity"/>
-        <activity android:name=".NavigationActivityExp"/>
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".SettingsActivity"/>
-        <activity android:name=".IntroActivity"/>
-        <activity android:name=".StatisticsActivity"/>
-        <activity android:name=".SearchActivity"/>
-        <activity android:name=".FavouriteProductsActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.ForgottenPasswordActivity"/>
+        <activity android:name=".activity.TermsOfUseActivity"/>
+        <activity android:name=".activity.MessageActivity"/>
+        <activity android:name=".activity.HomeActivity"/>
+        <activity android:name=".activity.NavigationActivity"/>
+        <activity android:name=".activity.ProductActivity"/>
+        <activity android:name=".activity.CartActivity"/>
+        <activity android:name=".activity.RegistrationActivity"/>
+        <activity android:name=".activity.ConfirmingAddressActivity"/>
+        <activity android:name=".activity.FinalCartActivity"/>
+        <activity android:name=".activity.NavigationActivityExp"/>
+        <activity android:name=".activity.ProfileActivity"/>
+        <activity android:name=".activity.SettingsActivity"/>
+        <activity android:name=".activity.IntroActivity"/>
+        <activity android:name=".activity.StatisticsActivity"/>
+        <activity android:name=".activity.SearchActivity"/>
+        <activity android:name=".activity.FavouriteProductsActivity"/>
     </application>
 
 </manifest>

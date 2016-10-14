@@ -32,7 +32,7 @@
                 android:visibility="visible"
                 />
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/cartlogo"
                 android:layout_width="62.7dp"
                 android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
             android:layout_marginTop="13.7dp">
 
 
-        <!--com.example.user.mysupermarket.TextViewFont
+        <!--com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/carttextviewaddress"
             android:layout_width="226dp"
             android:layout_height="74.7dp"
@@ -94,7 +94,7 @@
             android:layout_marginLeft="26.7dp"
             android:layout_marginRight="26.7dp"/>
         
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/textViewtotalprice"
             android:layout_width="132.7dp"
             android:layout_height="18.7dp"
@@ -102,7 +102,7 @@
             android:layout_marginRight="26.7dp"
             android:layout_gravity="right"/>
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/textViewtotalpricenumber"
             android:layout_width="132.7dp"
             android:layout_height="18.7dp"
@@ -114,7 +114,7 @@
 
 
 
-        <com.example.user.mysupermarket.LoginButton
+        <com.example.user.mysupermarket.custom_component.LoginButton
             android:id="@+id/cartbuy"
             android:layout_width="match_parent"
             android:layout_height="73.3dp"

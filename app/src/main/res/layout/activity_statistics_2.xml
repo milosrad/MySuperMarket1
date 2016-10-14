@@ -27,7 +27,7 @@
             android:visibility="visible"
             />
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/statisticslogo"
             android:layout_width="104dp"
             android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         android:layout_marginRight="26.7dp"
         android:layout_below="@+id/statisticsprofileimage">
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/textViewstatisticspriceamount"
             android:layout_width="228dp"
             android:layout_height="53.dp"
@@ -87,7 +87,7 @@
             android:layout_alignParentBottom="true">
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/totalamount"
                 android:layout_width="122.7dp"
                 android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
         android:layout_below="@+id/statisticslayounttotalamount"
         android:layout_marginTop="13.dp">
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/textViewstatisticsshoppingnumber"
             android:layout_width="57.3dp"
             android:layout_height="53.dp"
@@ -142,7 +142,7 @@
             android:layout_alignParentBottom="true">
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/shoppingnumber"
                 android:layout_width="84dp"
                 android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
 
     >
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/textViewstaticsrecomendationnumber"
             android:layout_width="57.3dp"
             android:layout_height="53.dp"
@@ -200,7 +200,7 @@
             android:layout_alignParentBottom="true">
 
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/recomendationnumber"
                 android:layout_width="84dp"
                 android:layout_height="wrap_content"

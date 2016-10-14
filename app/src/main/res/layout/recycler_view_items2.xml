@@ -51,7 +51,7 @@
         >
 
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/producttitle"
             android:layout_width="51.5dp"
             android:layout_height="12.5dp"
@@ -61,7 +61,7 @@
             android:textColor="@color/colorblack"
             android:textSize="8dp"/>
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/productprice2"
             android:layout_width="82.5dp"
             android:layout_height="12.5dp"

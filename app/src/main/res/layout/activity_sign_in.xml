@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +25,7 @@
 
             />
 
-        <com.example.user.mysupermarket.EditTextFont
+        <com.example.user.mysupermarket.custom_component.EditTextFont
         android:id="@+id/sign_in_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,12 +45,26 @@
 
     </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/sign_in_progressbar"
+            android:visibility="gone"
+            android:layout_width="133.3dp"
+            android:layout_height="133.3dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+
+            android:layout_marginTop="100dp"
+            android:tint="@color/colorYellowLogin"
+            style="?android:attr/progressBarStyleLarge"
+            android:background="@color/underlineopacity"
+            />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30.5dp">
+        android:layout_marginTop="10.5dp">
 
         <ImageView
             android:id="@+id/sign_in_password_image"
@@ -57,7 +76,7 @@
 
             />
 
-        <com.example.user.mysupermarket.EditTextFont
+        <com.example.user.mysupermarket.custom_component.EditTextFont
             android:id="@+id/sign_in_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,7 +104,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10.5dp">
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/sign_in_remember_me"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,7 +126,7 @@
             android:layout_marginLeft="20dp"
             android:theme="@style/SCBSwitch"/>
 
-        <com.example.user.mysupermarket.LoginButton
+        <com.example.user.mysupermarket.custom_component.LoginButton
             android:id="@+id/skipbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,7 +140,7 @@
     
     
 
-    <com.example.user.mysupermarket.LoginButton
+    <com.example.user.mysupermarket.custom_component.LoginButton
         android:id="@+id/sign_in_button"
         android:layout_width="335dp"
         android:layout_height="45dp"
@@ -130,9 +149,12 @@
         android:background="@color/colorYellowLogin"
         android:hint="@string/SignInButton"
         android:textColor="@android:color/black"
+        android:visibility="visible"
         />
 
-    <com.example.user.mysupermarket.LoginButton
+
+
+    <com.example.user.mysupermarket.custom_component.LoginButton
         android:id="@+id/forgottenpasswordbutton"
         android:layout_width="200dp"
         android:layout_height="23dp"
@@ -146,4 +168,6 @@
 
         />
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

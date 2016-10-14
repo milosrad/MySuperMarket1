@@ -24,7 +24,7 @@
             android:visibility="visible"
             />
 
-        <com.example.user.mysupermarket.TextViewFont
+        <com.example.user.mysupermarket.custom_component.TextViewFont
             android:id="@+id/finalcartlogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

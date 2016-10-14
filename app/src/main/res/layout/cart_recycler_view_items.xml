@@ -13,7 +13,7 @@
         android:layout_marginTop="16.7dp"/>
 
 
-    <com.example.user.mysupermarket.TextViewFont
+    <com.example.user.mysupermarket.custom_component.TextViewFont
         android:id="@+id/carttypeproduct"
         android:layout_width="51.3dp"
         android:layout_height="20dp"
@@ -22,7 +22,7 @@
         android:layout_marginLeft="7.3dp"/>
 
 
-    <com.example.user.mysupermarket.TextViewFont
+    <com.example.user.mysupermarket.custom_component.TextViewFont
         android:id="@+id/cartpriceproduct"
         android:layout_width="108dp"
         android:layout_height="20dp"
@@ -32,7 +32,7 @@
         android:layout_toRightOf="@+id/cartimageproduct"/>
 
 
-    <com.example.user.mysupermarket.TextViewFont
+    <com.example.user.mysupermarket.custom_component.TextViewFont
         android:id="@+id/cartamountproduct"
         android:layout_width="92.7dp"
         android:layout_height="20dp"

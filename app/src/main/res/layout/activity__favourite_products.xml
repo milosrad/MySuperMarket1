@@ -29,7 +29,7 @@
                 android:visibility="visible"
                 />
 
-            <com.example.user.mysupermarket.TextViewFont
+            <com.example.user.mysupermarket.custom_component.TextViewFont
                 android:id="@+id/favouriteslogo"
                 android:layout_width="242.7dp"
                 android:layout_height="wrap_content"
